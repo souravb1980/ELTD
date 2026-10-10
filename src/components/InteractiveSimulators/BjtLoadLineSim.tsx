@@ -34,7 +34,7 @@ export const BjtLoadLineSim: React.FC = () => {
         <div className="space-y-3 text-xs">
           <div>
             <div className="flex justify-between text-slate-700 mb-1">
-              <span>Supply Voltage (Vcc):</span>
+              <span>Supply Voltage (V<sub>CC</sub>):</span>
               <span className="font-mono font-bold text-slate-900">{vcc} V</span>
             </div>
             <input 
@@ -46,7 +46,7 @@ export const BjtLoadLineSim: React.FC = () => {
 
           <div>
             <div className="flex justify-between text-slate-700 mb-1">
-              <span>Collector Resistor (Rc):</span>
+              <span>Collector Resistor (R<sub>C</sub>):</span>
               <span className="font-mono font-bold text-slate-900">{rc} kΩ</span>
             </div>
             <input 
@@ -58,7 +58,7 @@ export const BjtLoadLineSim: React.FC = () => {
 
           <div>
             <div className="flex justify-between text-slate-700 mb-1">
-              <span>Emitter Resistor (RE):</span>
+              <span>Emitter Resistor (R<sub>E</sub>):</span>
               <span className="font-mono font-bold text-slate-900">{re} kΩ</span>
             </div>
             <input 
@@ -70,7 +70,7 @@ export const BjtLoadLineSim: React.FC = () => {
 
           <div>
             <div className="flex justify-between text-slate-700 mb-1">
-              <span>Base Current (IB):</span>
+              <span>Base Current (I<sub>B</sub>):</span>
               <span className="font-mono font-bold text-slate-900">{ibMicroA} μA</span>
             </div>
             <input 
@@ -82,7 +82,7 @@ export const BjtLoadLineSim: React.FC = () => {
 
           <div>
             <div className="flex justify-between text-slate-700 mb-1">
-              <span>Transistor Beta (β / hFE):</span>
+              <span>Transistor Beta (β / h<sub>FE</sub>):</span>
               <span className="font-mono font-bold text-slate-900">{beta}</span>
             </div>
             <input 
@@ -101,13 +101,13 @@ export const BjtLoadLineSim: React.FC = () => {
               {/* Axes */}
               <line x1="30" y1="120" x2="260" y2="120" stroke="#64748b" strokeWidth="1.5" />
               <line x1="30" y1="10" x2="30" y2="120" stroke="#64748b" strokeWidth="1.5" />
-              <text x="250" y="135" fill="#94a3b8" fontSize="10">Vce (V)</text>
-              <text x="10" y="20" fill="#94a3b8" fontSize="10">Ic (mA)</text>
+              <text x="250" y="135" fill="#94a3b8" fontSize="10">V<tspan baselineShift="sub" fontSize="75%">CE</tspan> (V)</text>
+              <text x="10" y="20" fill="#94a3b8" fontSize="10">I<tspan baselineShift="sub" fontSize="75%">C</tspan> (mA)</text>
 
               {/* Load line: (30, ySat) to (xCutoff, 120) */}
               <line x1="30" y1="25" x2="240" y2="120" stroke="#38bdf8" strokeWidth="2" />
-              <text x="35" y="25" fill="#38bdf8" fontSize="9">Ic(sat) = {icSatMA.toFixed(1)}mA</text>
-              <text x="200" y="115" fill="#38bdf8" fontSize="9">Vcc = {vcc}V</text>
+              <text x="35" y="25" fill="#38bdf8" fontSize="9">I<tspan baselineShift="sub" fontSize="75%">C(sat)</tspan> = {icSatMA.toFixed(1)}mA</text>
+              <text x="200" y="115" fill="#38bdf8" fontSize="9">V<tspan baselineShift="sub" fontSize="75%">CC</tspan> = {vcc}V</text>
 
               {/* Q-Point dot */}
               {(() => {
@@ -118,7 +118,7 @@ export const BjtLoadLineSim: React.FC = () => {
                 return (
                   <>
                     <circle cx={qX} cy={qY} r="5" fill="#ef4444" stroke="#ffffff" strokeWidth="1.5" />
-                    <text x={Math.min(220, qX + 8)} y={Math.max(30, qY - 4)} fill="#fca5a5" fontSize="10" fontWeight="bold">
+                    <text x={Math.min(210, qX + 8)} y={Math.max(30, qY - 4)} fill="#fca5a5" fontSize="9.5" fontWeight="bold">
                       Q ({vceQ.toFixed(1)}V, {icQ.toFixed(1)}mA)
                     </text>
                   </>
@@ -129,11 +129,11 @@ export const BjtLoadLineSim: React.FC = () => {
 
           <div className="grid grid-cols-2 gap-3 text-center text-xs">
             <div className="p-2.5 bg-blue-50 border border-blue-200 rounded-lg">
-              <span className="text-slate-600 block">Collector Current (ICQ)</span>
+              <span className="text-slate-600 block">Collector Current (I<sub>CQ</sub>)</span>
               <span className="text-lg font-mono font-bold text-blue-900">{icQ.toFixed(2)} mA</span>
             </div>
             <div className="p-2.5 bg-indigo-50 border border-indigo-200 rounded-lg">
-              <span className="text-slate-600 block">Collector-Emitter (VCEQ)</span>
+              <span className="text-slate-600 block">Collector-Emitter (V<sub>CEQ</sub>)</span>
               <span className="text-lg font-mono font-bold text-indigo-900">{vceQ.toFixed(2)} V</span>
             </div>
           </div>
@@ -143,7 +143,7 @@ export const BjtLoadLineSim: React.FC = () => {
             <span className={`font-bold ${isSaturated ? 'text-amber-600' : vceQ > vcc * 0.9 ? 'text-slate-600' : 'text-emerald-700'}`}>
               {isSaturated ? 'Saturation Region (Closed Switch)' : vceQ > vcc * 0.9 ? 'Cutoff Region (Open Switch)' : 'Active Linear Region (Undistorted Amplification)'}
             </span>
-            <span className="text-slate-500 block text-[11px] mt-0.5">Approx AC Gain Av ≈ {av.toFixed(0)}</span>
+            <span className="text-slate-500 block text-[11px] mt-0.5">Approx AC Gain A<sub>v</sub> ≈ {av.toFixed(0)}</span>
           </div>
         </div>
       </div>

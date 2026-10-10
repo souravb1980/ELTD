@@ -2059,7 +2059,7 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
             BJT (NPN) Common Emitter (CE) Input &amp; Output Characteristics
           </text>
           <text x="370" y="39" textAnchor="middle" fill="#64748b" stroke="none" fontSize="9.5">
-            Active, Saturation (V_CE(sat) ≈ 0.2V) &amp; Cutoff Regions · DC Load Line &amp; Quiescent (Q) Point · Input Knee (Vγ ≈ 0.7V)
+            Active, Saturation (V<tspan baselineShift="sub" fontSize="75%">CE(sat)</tspan> ≈ 0.2V) &amp; Cutoff Regions · DC Load Line &amp; Quiescent (Q) Point · Input Knee (V<tspan baselineShift="sub" fontSize="75%">γ</tspan> ≈ 0.7V)
           </text>
 
           {/* ======================================================== */}
@@ -2067,22 +2067,22 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           {/* ======================================================== */}
           <rect x="12" y="48" width="430" height="315" rx="8" fill="#ffffff" stroke="#cbd5e1" strokeWidth="1" />
           <text x="22" y="66" fill="#1e3a8a" stroke="none" fontSize="10.5" fontWeight="bold">
-            CE Output Characteristics (IC vs VCE) &amp; DC Load Line:
+            CE Output Characteristics (I<tspan baselineShift="sub" fontSize="75%">C</tspan> vs V<tspan baselineShift="sub" fontSize="75%">CE</tspan>) &amp; DC Load Line:
           </text>
 
           {/* Shaded Saturation Region (0 to 0.7V VCE, left of knee line) */}
           <path d="M60 280 L60 85 L90 85 L90 280 Z" fill="#fef3c7" fillOpacity="0.6" stroke="none" />
           <text x="75" y="100" textAnchor="middle" fill="#b45309" stroke="none" fontSize="7.5" fontWeight="bold">Saturation</text>
-          <text x="75" y="110" textAnchor="middle" fill="#b45309" stroke="none" fontSize="6.8">VCE &lt; 0.2V</text>
+          <text x="75" y="110" textAnchor="middle" fill="#b45309" stroke="none" fontSize="6.8">V<tspan baselineShift="sub" fontSize="75%">CE</tspan> &lt; 0.2V</text>
 
           {/* Shaded Cutoff Region (IB <= 0 at bottom) */}
           <rect x="60" y="272" width="365" height="10" fill="#fee2e2" fillOpacity="0.7" stroke="none" />
-          <text x="360" y="279" fill="#991b1b" stroke="none" fontSize="7.5" fontWeight="bold">Cutoff Region (IB = 0)</text>
+          <text x="360" y="279" fill="#991b1b" stroke="none" fontSize="7.5" fontWeight="bold">Cutoff Region (I<tspan baselineShift="sub" fontSize="75%">B</tspan> = 0)</text>
 
           {/* Active Region Label in Center */}
           <rect x="160" y="70" width="130" height="18" rx="4" fill="#eff6ff" stroke="#bfdbfe" strokeWidth="0.8" />
           <text x="225" y="82" textAnchor="middle" fill="#1e40af" stroke="none" fontSize="8" fontWeight="bold">
-            Active Region (IC = β · IB)
+            Active Region (I<tspan baselineShift="sub" fontSize="75%">C</tspan> = β · I<tspan baselineShift="sub" fontSize="75%">B</tspan>)
           </text>
 
           {/* Grid lines */}
@@ -2101,12 +2101,12 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           {/* X-Axis: VCE */}
           <line x1="55" y1="280" x2="430" y2="280" stroke="#1e293b" strokeWidth="1.8" />
           <polygon points="430,280 422,276 422,284" fill="#1e293b" stroke="none" />
-          <text x="425" y="295" textAnchor="end" fill="#0f172a" stroke="none" fontSize="9.5" fontWeight="bold">VCE (Volts) →</text>
+          <text x="425" y="295" textAnchor="end" fill="#0f172a" stroke="none" fontSize="9.5" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">CE</tspan> (Volts) →</text>
 
           {/* Y-Axis: IC */}
           <line x1="60" y1="285" x2="60" y2="70" stroke="#1e293b" strokeWidth="1.8" />
           <polygon points="60,70 56,78 64,78" fill="#1e293b" stroke="none" />
-          <text x="50" y="78" textAnchor="end" fill="#0f172a" stroke="none" fontSize="9.5" fontWeight="bold">IC (mA) ↑</text>
+          <text x="50" y="78" textAnchor="end" fill="#0f172a" stroke="none" fontSize="9.5" fontWeight="bold">I<tspan baselineShift="sub" fontSize="75%">C</tspan> (mA) ↑</text>
           <text x="50" y="285" fill="#64748b" stroke="none" fontSize="9">0</text>
 
           {/* Tick marks on VCE axis */}
@@ -2115,35 +2115,35 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           <text x="140" y="292" textAnchor="middle" fill="#64748b" stroke="none" fontSize="7.5">2V</text>
           <text x="220" y="292" textAnchor="middle" fill="#64748b" stroke="none" fontSize="7.5">4V</text>
           <text x="300" y="292" textAnchor="middle" fill="#64748b" stroke="none" fontSize="7.5">6V</text>
-          <text x="380" y="292" textAnchor="middle" fill="#64748b" stroke="none" fontSize="7.5">8V (Vcc)</text>
+          <text x="380" y="292" textAnchor="middle" fill="#64748b" stroke="none" fontSize="7.5">8V (V<tspan baselineShift="sub" fontSize="75%">CC</tspan>)</text>
 
           {/* Family of IC curves for IB = 40μA, 30μA, 20μA, 10μA, 0μA */}
           {/* IB = 40 μA */}
           <path d="M60 280 Q75 110 90 108 L420 102" stroke="#2563eb" strokeWidth="2.2" fill="none" />
-          <text x="422" y="100" fill="#1e40af" stroke="none" fontSize="8" fontWeight="bold">IB = 40 μA</text>
+          <text x="422" y="100" fill="#1e40af" stroke="none" fontSize="8" fontWeight="bold">I<tspan baselineShift="sub" fontSize="75%">B</tspan> = 40 μA</text>
 
           {/* IB = 30 μA */}
           <path d="M60 280 Q75 150 90 148 L420 144" stroke="#2563eb" strokeWidth="2.2" fill="none" />
-          <text x="422" y="142" fill="#1e40af" stroke="none" fontSize="8" fontWeight="bold">IB = 30 μA</text>
+          <text x="422" y="142" fill="#1e40af" stroke="none" fontSize="8" fontWeight="bold">I<tspan baselineShift="sub" fontSize="75%">B</tspan> = 30 μA</text>
 
           {/* IB = 20 μA (Q-point curve) */}
           <path d="M60 280 Q75 190 90 188 L420 184" stroke="#0284c7" strokeWidth="2.4" fill="none" />
-          <text x="422" y="182" fill="#0369a1" stroke="none" fontSize="8" fontWeight="bold">IB = 20 μA (Q-curve)</text>
+          <text x="422" y="182" fill="#0369a1" stroke="none" fontSize="8" fontWeight="bold">I<tspan baselineShift="sub" fontSize="75%">B</tspan> = 20 μA (Q-curve)</text>
 
           {/* IB = 10 μA */}
           <path d="M60 280 Q75 230 90 228 L420 226" stroke="#2563eb" strokeWidth="2.2" fill="none" />
-          <text x="422" y="224" fill="#1e40af" stroke="none" fontSize="8" fontWeight="bold">IB = 10 μA</text>
+          <text x="422" y="224" fill="#1e40af" stroke="none" fontSize="8" fontWeight="bold">I<tspan baselineShift="sub" fontSize="75%">B</tspan> = 10 μA</text>
 
           {/* IB = 0 (Cutoff) */}
           <line x1="60" y1="278" x2="420" y2="278" stroke="#dc2626" strokeWidth="1.8" strokeDasharray="3 3" />
-          <text x="422" y="276" fill="#dc2626" stroke="none" fontSize="7.5" fontWeight="bold">IB = 0 (ICEO)</text>
+          <text x="422" y="276" fill="#dc2626" stroke="none" fontSize="7.5" fontWeight="bold">I<tspan baselineShift="sub" fontSize="75%">B</tspan> = 0 (I<tspan baselineShift="sub" fontSize="75%">CEO</tspan>)</text>
 
           {/* DC LOAD LINE in Crimson Dashed */}
           <line x1="60" y1="95" x2="380" y2="280" stroke="#dc2626" strokeWidth="2.2" strokeDasharray="5 4" />
           <circle cx="60" cy="95" r="3.5" fill="#dc2626" stroke="#ffffff" strokeWidth="1" />
-          <text x="65" y="93" fill="#dc2626" stroke="none" fontSize="7.8" fontWeight="bold">Vcc/RC (Sat)</text>
+          <text x="65" y="93" fill="#dc2626" stroke="none" fontSize="7.8" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">CC</tspan>/R<tspan baselineShift="sub" fontSize="75%">C</tspan> (Sat)</text>
           <circle cx="380" cy="280" r="3.5" fill="#dc2626" stroke="#ffffff" strokeWidth="1" />
-          <text x="380" y="272" textAnchor="middle" fill="#dc2626" stroke="none" fontSize="7.8" fontWeight="bold">Vcc (Cutoff)</text>
+          <text x="380" y="272" textAnchor="middle" fill="#dc2626" stroke="none" fontSize="7.8" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">CC</tspan> (Cutoff)</text>
 
           {/* Quiescent Q-Point at Intersection of DC Load Line & IB = 20 μA curve */}
           <circle cx="225" cy="186" r="5" fill="#dc2626" stroke="#ffffff" strokeWidth="1.5" />
@@ -2153,15 +2153,15 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           {/* Q-Point Callout Box */}
           <rect x="235" y="166" width="95" height="30" rx="4" fill="#fef2f2" stroke="#fecaca" strokeWidth="1" />
           <text x="282" y="178" textAnchor="middle" fill="#991b1b" stroke="none" fontSize="8" fontWeight="bold">Operating Point Q</text>
-          <text x="282" y="190" textAnchor="middle" fill="#7f1d1d" stroke="none" fontSize="7.2">VCEQ ≈ Vcc/2 · ICQ = β·IB</text>
+          <text x="282" y="190" textAnchor="middle" fill="#7f1d1d" stroke="none" fontSize="7.2">V<tspan baselineShift="sub" fontSize="75%">CEQ</tspan> ≈ V<tspan baselineShift="sub" fontSize="75%">CC</tspan>/2 · I<tspan baselineShift="sub" fontSize="75%">CQ</tspan> = β·I<tspan baselineShift="sub" fontSize="75%">B</tspan></text>
 
           {/* Bottom Left Formula Box */}
           <rect x="22" y="322" width="410" height="32" rx="4" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1" />
           <text x="227" y="335" textAnchor="middle" fill="#0f172a" stroke="none" fontSize="8" fontWeight="bold">
-            DC Load Line: VCE = VCC - IC · (RC + RE) · Active: IC = β · IB + ICEO
+            DC Load Line: V<tspan baselineShift="sub" fontSize="75%">CE</tspan> = V<tspan baselineShift="sub" fontSize="75%">CC</tspan> - I<tspan baselineShift="sub" fontSize="75%">C</tspan> · (R<tspan baselineShift="sub" fontSize="75%">C</tspan> + R<tspan baselineShift="sub" fontSize="75%">E</tspan>) · Active: I<tspan baselineShift="sub" fontSize="75%">C</tspan> = β · I<tspan baselineShift="sub" fontSize="75%">B</tspan> + I<tspan baselineShift="sub" fontSize="75%">CEO</tspan>
           </text>
           <text x="227" y="347" textAnchor="middle" fill="#475569" stroke="none" fontSize="7.2">
-            Early Effect: Extrapolations meet at -VA on negative axis · Saturation: VCE(sat) ≈ 0.2V
+            Early Effect: Extrapolations meet at -V<tspan baselineShift="sub" fontSize="75%">A</tspan> on negative axis · Saturation: V<tspan baselineShift="sub" fontSize="75%">CE(sat)</tspan> ≈ 0.2V
           </text>
 
           {/* ======================================================== */}
@@ -2169,7 +2169,7 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           {/* ======================================================== */}
           <rect x="452" y="48" width="276" height="315" rx="8" fill="#ffffff" stroke="#cbd5e1" strokeWidth="1" />
           <text x="462" y="66" fill="#1e3a8a" stroke="none" fontSize="10.5" fontWeight="bold">
-            CE Input Characteristic (IB vs VBE):
+            CE Input Characteristic (I<tspan baselineShift="sub" fontSize="75%">B</tspan> vs V<tspan baselineShift="sub" fontSize="75%">BE</tspan>):
           </text>
 
           {/* Small Input Graph Area */}
@@ -2182,26 +2182,26 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
             {/* Axes */}
             <line x1="25" y1="105" x2="235" y2="105" stroke="#1e293b" strokeWidth="1.5" />
             <polygon points="235,105 228,102 228,108" fill="#1e293b" stroke="none" />
-            <text x="235" y="117" textAnchor="end" fill="#0f172a" stroke="none" fontSize="8.5" fontWeight="bold">VBE (V)</text>
+            <text x="235" y="117" textAnchor="end" fill="#0f172a" stroke="none" fontSize="8.5" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">BE</tspan> (V)</text>
 
             <line x1="25" y1="105" x2="25" y2="15" stroke="#1e293b" strokeWidth="1.5" />
             <polygon points="25,15 22,22 28,22" fill="#1e293b" stroke="none" />
-            <text x="22" y="13" textAnchor="end" fill="#0f172a" stroke="none" fontSize="8.5" fontWeight="bold">IB (μA)</text>
+            <text x="22" y="13" textAnchor="end" fill="#0f172a" stroke="none" fontSize="8.5" fontWeight="bold">I<tspan baselineShift="sub" fontSize="75%">B</tspan> (μA)</text>
 
             {/* Knee Voltage Vγ Marker */}
             <line x1="130" y1="20" x2="130" y2="105" stroke="#2563eb" strokeWidth="1" strokeDasharray="2 2" />
-            <text x="130" y="117" textAnchor="middle" fill="#2563eb" stroke="none" fontSize="7.8" fontWeight="bold">0.7V (Knee)</text>
+            <text x="130" y="117" textAnchor="middle" fill="#2563eb" stroke="none" fontSize="7.8" fontWeight="bold">0.7V (Knee V<tspan baselineShift="sub" fontSize="75%">γ</tspan>)</text>
 
             {/* Input Curves for VCE = 1V and VCE = 10V */}
             <path d="M25 105 L110 105 Q128 103 140 70 L155 20" stroke="#2563eb" strokeWidth="2.2" fill="none" />
-            <text x="160" y="24" fill="#1e40af" stroke="none" fontSize="7.5" fontWeight="bold">VCE = 1V</text>
+            <text x="160" y="24" fill="#1e40af" stroke="none" fontSize="7.5" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">CE</tspan> = 1V</text>
 
             <path d="M25 105 L120 105 Q135 103 148 70 L165 20" stroke="#059669" strokeWidth="1.8" strokeDasharray="3 2" fill="none" />
-            <text x="170" y="38" fill="#065f46" stroke="none" fontSize="7.5" fontWeight="bold">VCE = 10V</text>
+            <text x="170" y="38" fill="#065f46" stroke="none" fontSize="7.5" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">CE</tspan> = 10V</text>
 
             {/* Dynamic Resistance hie Triangle */}
             <polygon points="144,55 152,55 152,35" fill="#dbeafe" stroke="#2563eb" strokeWidth="0.8" />
-            <text x="160" y="52" fill="#1e40af" stroke="none" fontSize="7">hie = ΔVBE / ΔIB</text>
+            <text x="160" y="52" fill="#1e40af" stroke="none" fontSize="7">h<tspan baselineShift="sub" fontSize="75%">ie</tspan> = ΔV<tspan baselineShift="sub" fontSize="75%">BE</tspan> / ΔI<tspan baselineShift="sub" fontSize="75%">B</tspan></text>
           </g>
 
           {/* Transistor Operating Regions Table in Lower Half */}
@@ -2214,20 +2214,20 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
             {/* Active Mode */}
             <rect x="8" y="22" width="244" height="36" rx="3" fill="#eff6ff" stroke="#bfdbfe" strokeWidth="0.8" />
             <text x="14" y="34" fill="#1e40af" stroke="none" fontSize="8" fontWeight="bold">1. Active Mode (Linear Amplifiers):</text>
-            <text x="14" y="44" fill="#1e3a8a" stroke="none" fontSize="7.2">• E-B Junction: Forward Biased (VBE ≈ 0.7V)</text>
-            <text x="14" y="53" fill="#1e3a8a" stroke="none" fontSize="7.2">• C-B Junction: Reverse Biased (VCB &gt; 0) · IC = β·IB</text>
+            <text x="14" y="44" fill="#1e3a8a" stroke="none" fontSize="7.2">• E-B Junction: Forward Biased (V<tspan baselineShift="sub" fontSize="75%">BE</tspan> ≈ 0.7V)</text>
+            <text x="14" y="53" fill="#1e3a8a" stroke="none" fontSize="7.2">• C-B Junction: Reverse Biased (V<tspan baselineShift="sub" fontSize="75%">CB</tspan> &gt; 0) · I<tspan baselineShift="sub" fontSize="75%">C</tspan> = β·I<tspan baselineShift="sub" fontSize="75%">B</tspan></text>
 
             {/* Saturation Mode */}
             <rect x="8" y="62" width="244" height="36" rx="3" fill="#fef3c7" stroke="#fde68a" strokeWidth="0.8" />
             <text x="14" y="74" fill="#92400e" stroke="none" fontSize="8" fontWeight="bold">2. Saturation Mode (Switch CLOSED / ON):</text>
             <text x="14" y="84" fill="#78350f" stroke="none" fontSize="7.2">• E-B Forward Biased · C-B Forward Biased</text>
-            <text x="14" y="93" fill="#78350f" stroke="none" fontSize="7.2">• VCE(sat) ≈ 0.2V · Max Current IC = VCC / RC</text>
+            <text x="14" y="93" fill="#78350f" stroke="none" fontSize="7.2">• V<tspan baselineShift="sub" fontSize="75%">CE(sat)</tspan> ≈ 0.2V · Max Current I<tspan baselineShift="sub" fontSize="75%">C</tspan> = V<tspan baselineShift="sub" fontSize="75%">CC</tspan> / R<tspan baselineShift="sub" fontSize="75%">C</tspan></text>
 
             {/* Cutoff Mode */}
             <rect x="8" y="102" width="244" height="36" rx="3" fill="#fef2f2" stroke="#fecaca" strokeWidth="0.8" />
             <text x="14" y="114" fill="#991b1b" stroke="none" fontSize="8" fontWeight="bold">3. Cutoff Mode (Switch OPEN / OFF):</text>
             <text x="14" y="124" fill="#7f1d1d" stroke="none" fontSize="7.2">• E-B Reverse Biased · C-B Reverse Biased</text>
-            <text x="14" y="133" fill="#7f1d1d" stroke="none" fontSize="7.2">• IB = 0 · IC = ICEO ≈ 0 · VCE = VCC</text>
+            <text x="14" y="133" fill="#7f1d1d" stroke="none" fontSize="7.2">• I<tspan baselineShift="sub" fontSize="75%">B</tspan> = 0 · I<tspan baselineShift="sub" fontSize="75%">C</tspan> = I<tspan baselineShift="sub" fontSize="75%">CEO</tspan> ≈ 0 · V<tspan baselineShift="sub" fontSize="75%">CE</tspan> = V<tspan baselineShift="sub" fontSize="75%">CC</tspan></text>
           </g>
         </svg>
       );
@@ -2332,12 +2332,12 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           <rect x="22" y="202" width="334" height="113" rx="5" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1" />
           <text x="32" y="217" fill="#0f172a" stroke="none" fontSize="8.2" fontWeight="bold">NPN Operational Physics &amp; Relations:</text>
           <text x="32" y="230" fill="#334155" stroke="none" fontSize="7.5">• Doping Profile: Emitter (n⁺) ≫ Collector (n) ≫ Base (p)</text>
-          <text x="32" y="242" fill="#334155" stroke="none" fontSize="7.5">• Physical Size: Collector Area &gt; Emitter Area ≫ Base Width (WB ≪ Ln)</text>
-          <text x="32" y="254" fill="#334155" stroke="none" fontSize="7.5">• Junction Biases: E-B Forward Biased (VBE ≈ 0.7V) · C-B Reverse Biased</text>
-          <text x="32" y="266" fill="#334155" stroke="none" fontSize="7.5">• Current Conservation: IE = IB + IC (Kirchhoff's Node Law)</text>
-          <text x="32" y="278" fill="#334155" stroke="none" fontSize="7.5">• Current Gains: α = IC / IE ≈ 0.98 · β = IC / IB = α / (1 - α) ≈ 50-300</text>
-          <text x="32" y="290" fill="#1e40af" stroke="none" fontSize="7.5" fontWeight="bold">• Majority Carriers: High-mobility electrons (μn ≈ 1400 cm²/V·s)</text>
-          <text x="32" y="303" fill="#64748b" stroke="none" fontSize="7.2">• Terminal Directions: IE leaves E · IB enters B · IC enters C</text>
+          <text x="32" y="242" fill="#334155" stroke="none" fontSize="7.5">• Physical Size: Collector Area &gt; Emitter Area ≫ Base Width (W<tspan baselineShift="sub" fontSize="75%">B</tspan> ≪ L<tspan baselineShift="sub" fontSize="75%">n</tspan>)</text>
+          <text x="32" y="254" fill="#334155" stroke="none" fontSize="7.5">• Junction Biases: E-B Forward Biased (V<tspan baselineShift="sub" fontSize="75%">BE</tspan> ≈ 0.7V) · C-B Reverse Biased</text>
+          <text x="32" y="266" fill="#334155" stroke="none" fontSize="7.5">• Current Conservation: I<tspan baselineShift="sub" fontSize="75%">E</tspan> = I<tspan baselineShift="sub" fontSize="75%">B</tspan> + I<tspan baselineShift="sub" fontSize="75%">C</tspan> (Kirchhoff's Node Law)</text>
+          <text x="32" y="278" fill="#334155" stroke="none" fontSize="7.5">• Current Gains: α = I<tspan baselineShift="sub" fontSize="75%">C</tspan> / I<tspan baselineShift="sub" fontSize="75%">E</tspan> ≈ 0.98 · β = I<tspan baselineShift="sub" fontSize="75%">C</tspan> / I<tspan baselineShift="sub" fontSize="75%">B</tspan> = α / (1 - α) ≈ 50-300</text>
+          <text x="32" y="290" fill="#1e40af" stroke="none" fontSize="7.5" fontWeight="bold">• Majority Carriers: High-mobility electrons (μ<tspan baselineShift="sub" fontSize="75%">n</tspan> ≈ 1400 cm²/V·s)</text>
+          <text x="32" y="303" fill="#64748b" stroke="none" fontSize="7.2">• Terminal Directions: I<tspan baselineShift="sub" fontSize="75%">E</tspan> leaves E · I<tspan baselineShift="sub" fontSize="75%">B</tspan> enters B · I<tspan baselineShift="sub" fontSize="75%">C</tspan> enters C</text>
 
           {/* RIGHT: PNP Panel */}
           <rect x="376" y="48" width="350" height="275" rx="8" fill="#ffffff" stroke="#cbd5e1" strokeWidth="1" />
@@ -2425,12 +2425,12 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           <rect x="384" y="202" width="334" height="113" rx="5" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1" />
           <text x="394" y="217" fill="#0f172a" stroke="none" fontSize="8.2" fontWeight="bold">PNP Operational Physics &amp; Relations:</text>
           <text x="394" y="230" fill="#334155" stroke="none" fontSize="7.5">• Doping Profile: Emitter (p⁺) ≫ Collector (p) ≫ Base (n)</text>
-          <text x="394" y="242" fill="#334155" stroke="none" fontSize="7.5">• Physical Size: Collector Area &gt; Emitter Area ≫ Base Width (WB ≪ Lp)</text>
-          <text x="394" y="254" fill="#334155" stroke="none" fontSize="7.5">• Junction Biases: E-B Forward Biased (VEB ≈ 0.7V) · C-B Reverse Biased</text>
-          <text x="394" y="266" fill="#334155" stroke="none" fontSize="7.5">• Current Conservation: IE = IB + IC (Current enters Emitter terminal)</text>
-          <text x="394" y="278" fill="#334155" stroke="none" fontSize="7.5">• Current Gains: α = IC / IE ≈ 0.98 · β = IC / IB = α / (1 - α) ≈ 50-300</text>
-          <text x="394" y="290" fill="#991b1b" stroke="none" fontSize="7.5" fontWeight="bold">• Majority Carriers: Holes with lower mobility (μp ≈ 450 cm²/V·s)</text>
-          <text x="394" y="303" fill="#64748b" stroke="none" fontSize="7.2">• Terminal Directions: IE enters E · IB leaves B · IC leaves C</text>
+          <text x="394" y="242" fill="#334155" stroke="none" fontSize="7.5">• Physical Size: Collector Area &gt; Emitter Area ≫ Base Width (W<tspan baselineShift="sub" fontSize="75%">B</tspan> ≪ L<tspan baselineShift="sub" fontSize="75%">p</tspan>)</text>
+          <text x="394" y="254" fill="#334155" stroke="none" fontSize="7.5">• Junction Biases: E-B Forward Biased (V<tspan baselineShift="sub" fontSize="75%">EB</tspan> ≈ 0.7V) · C-B Reverse Biased</text>
+          <text x="394" y="266" fill="#334155" stroke="none" fontSize="7.5">• Current Conservation: I<tspan baselineShift="sub" fontSize="75%">E</tspan> = I<tspan baselineShift="sub" fontSize="75%">B</tspan> + I<tspan baselineShift="sub" fontSize="75%">C</tspan> (Current enters Emitter terminal)</text>
+          <text x="394" y="278" fill="#334155" stroke="none" fontSize="7.5">• Current Gains: α = I<tspan baselineShift="sub" fontSize="75%">C</tspan> / I<tspan baselineShift="sub" fontSize="75%">E</tspan> ≈ 0.98 · β = I<tspan baselineShift="sub" fontSize="75%">C</tspan> / I<tspan baselineShift="sub" fontSize="75%">B</tspan> = α / (1 - α) ≈ 50-300</text>
+          <text x="394" y="290" fill="#991b1b" stroke="none" fontSize="7.5" fontWeight="bold">• Majority Carriers: Holes with lower mobility (μ<tspan baselineShift="sub" fontSize="75%">p</tspan> ≈ 450 cm²/V·s)</text>
+          <text x="394" y="303" fill="#64748b" stroke="none" fontSize="7.2">• Terminal Directions: I<tspan baselineShift="sub" fontSize="75%">E</tspan> enters E · I<tspan baselineShift="sub" fontSize="75%">B</tspan> leaves B · I<tspan baselineShift="sub" fontSize="75%">C</tspan> leaves C</text>
         </svg>
       );
 
@@ -2469,10 +2469,10 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           </g>
           <rect x="20" y="195" width="209" height="98" rx="4" fill="#eff6ff" stroke="#bfdbfe" strokeWidth="0.8" />
           <text x="26" y="210" fill="#1e40af" stroke="none" fontSize="7.8" fontWeight="bold">• Input: Base · Output: Collector</text>
-          <text x="26" y="224" fill="#1e3a8a" stroke="none" fontSize="7.5">• Rin: Moderate (~1-2 kΩ)</text>
-          <text x="26" y="238" fill="#1e3a8a" stroke="none" fontSize="7.5">• Rout: Moderate (~50 kΩ)</text>
-          <text x="26" y="252" fill="#1e3a8a" stroke="none" fontSize="7.5">• Voltage Gain Av: High (~100-500)</text>
-          <text x="26" y="266" fill="#1e3a8a" stroke="none" fontSize="7.5">• Current Gain Ai: β (High, 50-300)</text>
+          <text x="26" y="224" fill="#1e3a8a" stroke="none" fontSize="7.5">• R<tspan baselineShift="sub" fontSize="75%">in</tspan>: Moderate (~1-2 kΩ)</text>
+          <text x="26" y="238" fill="#1e3a8a" stroke="none" fontSize="7.5">• R<tspan baselineShift="sub" fontSize="75%">out</tspan>: Moderate (~50 kΩ)</text>
+          <text x="26" y="252" fill="#1e3a8a" stroke="none" fontSize="7.5">• Voltage Gain A<tspan baselineShift="sub" fontSize="75%">v</tspan>: High (~100-500)</text>
+          <text x="26" y="266" fill="#1e3a8a" stroke="none" fontSize="7.5">• Current Gain A<tspan baselineShift="sub" fontSize="75%">i</tspan>: β (High, 50-300)</text>
           <text x="26" y="280" fill="#991b1b" stroke="none" fontSize="7.5" fontWeight="bold">• Phase Shift: 180° Inversion (Audio Amp)</text>
 
           {/* Panel 2: CB */}
@@ -2503,10 +2503,10 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           </g>
           <rect x="265" y="195" width="209" height="98" rx="4" fill="#f0fdf4" stroke="#bbf7d0" strokeWidth="0.8" />
           <text x="271" y="210" fill="#166534" stroke="none" fontSize="7.8" fontWeight="bold">• Input: Emitter · Output: Collector</text>
-          <text x="271" y="224" fill="#14532d" stroke="none" fontSize="7.5">• Rin: Very Low (~20-50 Ω)</text>
-          <text x="271" y="238" fill="#14532d" stroke="none" fontSize="7.5">• Rout: Very High (~1 MΩ)</text>
-          <text x="271" y="252" fill="#14532d" stroke="none" fontSize="7.5">• Voltage Gain Av: High (~100-500)</text>
-          <text x="271" y="266" fill="#14532d" stroke="none" fontSize="7.5">• Current Gain Ai: α &lt; 1 (~0.98)</text>
+          <text x="271" y="224" fill="#14532d" stroke="none" fontSize="7.5">• R<tspan baselineShift="sub" fontSize="75%">in</tspan>: Very Low (~20-50 Ω)</text>
+          <text x="271" y="238" fill="#14532d" stroke="none" fontSize="7.5">• R<tspan baselineShift="sub" fontSize="75%">out</tspan>: Very High (~1 MΩ)</text>
+          <text x="271" y="252" fill="#14532d" stroke="none" fontSize="7.5">• Voltage Gain A<tspan baselineShift="sub" fontSize="75%">v</tspan>: High (~100-500)</text>
+          <text x="271" y="266" fill="#14532d" stroke="none" fontSize="7.5">• Current Gain A<tspan baselineShift="sub" fontSize="75%">i</tspan>: α &lt; 1 (~0.98)</text>
           <text x="271" y="280" fill="#166534" stroke="none" fontSize="7.5" fontWeight="bold">• Phase Shift: 0° In-Phase (VHF/RF)</text>
 
           {/* Panel 3: CC */}
@@ -2530,10 +2530,10 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           </g>
           <rect x="510" y="195" width="209" height="98" rx="4" fill="#faf5ff" stroke="#e9d5ff" strokeWidth="0.8" />
           <text x="516" y="210" fill="#6b21a8" stroke="none" fontSize="7.8" fontWeight="bold">• Input: Base · Output: Emitter</text>
-          <text x="516" y="224" fill="#581c87" stroke="none" fontSize="7.5">• Rin: Very High (~100-500 kΩ)</text>
-          <text x="516" y="238" fill="#581c87" stroke="none" fontSize="7.5">• Rout: Very Low (~10-50 Ω)</text>
-          <text x="516" y="252" fill="#581c87" stroke="none" fontSize="7.5">• Voltage Gain Av: ~1 (&lt; 1, Unity Follower)</text>
-          <text x="516" y="266" fill="#581c87" stroke="none" fontSize="7.5">• Current Gain Ai: 1 + β (Very High)</text>
+          <text x="516" y="224" fill="#581c87" stroke="none" fontSize="7.5">• R<tspan baselineShift="sub" fontSize="75%">in</tspan>: Very High (~100-500 kΩ)</text>
+          <text x="516" y="238" fill="#581c87" stroke="none" fontSize="7.5">• R<tspan baselineShift="sub" fontSize="75%">out</tspan>: Very Low (~10-50 Ω)</text>
+          <text x="516" y="252" fill="#581c87" stroke="none" fontSize="7.5">• Voltage Gain A<tspan baselineShift="sub" fontSize="75%">v</tspan>: ~1 (&lt; 1, Unity Follower)</text>
+          <text x="516" y="266" fill="#581c87" stroke="none" fontSize="7.5">• Current Gain A<tspan baselineShift="sub" fontSize="75%">i</tspan>: 1 + β (Very High)</text>
           <text x="516" y="280" fill="#6b21a8" stroke="none" fontSize="7.5" fontWeight="bold">• Phase: 0° In-Phase (Buffer / Driver)</text>
         </svg>
       );
@@ -2560,13 +2560,13 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
             {/* Vin pulse generator */}
             <rect x="25" y="152" width="32" height="38" rx="3" fill="#eff6ff" stroke="#93c5fd" />
             <path d="M29 178 L35 178 L35 160 L45 160 L45 178 L53 178" stroke="#2563eb" strokeWidth="1.8" fill="none" />
-            <text x="41" y="146" textAnchor="middle" fill="#2563eb" stroke="none" fontSize="8" fontWeight="bold">Vin (0V / 5V)</text>
+            <text x="41" y="146" textAnchor="middle" fill="#2563eb" stroke="none" fontSize="8" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">in</tspan> (0V / 5V)</text>
 
             {/* Base Resistor RB */}
             <line x1="57" y1="172" x2="82" y2="172" stroke="#1e293b" />
             <path d="M82 172 L88 166 L94 178 L100 166 L106 178 L112 166 L118 178 L122 172" stroke="#1e293b" strokeWidth="2" fill="none" />
             <line x1="122" y1="172" x2="152" y2="172" stroke="#1e293b" />
-            <text x="102" y="160" textAnchor="middle" fill="#1e293b" stroke="none" fontSize="8.5" fontWeight="bold">RB</text>
+            <text x="102" y="160" textAnchor="middle" fill="#1e293b" stroke="none" fontSize="8.5" fontWeight="bold">R<tspan baselineShift="sub" fontSize="75%">B</tspan></text>
 
             {/* BJT Transistor Symbol */}
             <circle cx="176" cy="172" r="23" stroke="#64748b" fill="#f8fafc" />
@@ -2591,23 +2591,23 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
             <line x1="192" y1="88" x2="192" y2="98" stroke="#1e293b" />
             <path d="M192 98 L186 104 L198 110 L186 116 L198 122 L186 128 L192 134" stroke="#1e293b" strokeWidth="2" fill="none" />
             <line x1="192" y1="134" x2="192" y2="150" stroke="#1e293b" />
-            <text x="206" y="118" fill="#1e293b" stroke="none" fontSize="9" fontWeight="bold">RC / Load</text>
+            <text x="206" y="118" fill="#1e293b" stroke="none" fontSize="9" fontWeight="bold">R<tspan baselineShift="sub" fontSize="75%">C</tspan> / Load</text>
             
             {/* +VCC Rail terminal */}
             <circle cx="192" cy="88" r="4" fill="#dc2626" />
-            <text x="202" y="92" fill="#dc2626" stroke="none" fontSize="10" fontWeight="bold">+VCC (+5V)</text>
+            <text x="202" y="92" fill="#dc2626" stroke="none" fontSize="10" fontWeight="bold">+V<tspan baselineShift="sub" fontSize="75%">CC</tspan> (+5V)</text>
 
             {/* Collector Output Node & Vout */}
             <circle cx="192" cy="150" r="3.5" fill="#1e293b" />
             <line x1="192" y1="150" x2="275" y2="150" stroke="#2563eb" strokeWidth="2" />
             <circle cx="275" cy="150" r="3.5" fill="#2563eb" />
-            <text x="283" y="148" fill="#2563eb" stroke="none" fontSize="9.5" fontWeight="bold">Vout (VCE)</text>
-            <text x="283" y="160" fill="#64748b" stroke="none" fontSize="7.5">OFF: VCC · ON: 0.2V</text>
+            <text x="283" y="148" fill="#2563eb" stroke="none" fontSize="9.5" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">out</tspan> (V<tspan baselineShift="sub" fontSize="75%">CE</tspan>)</text>
+            <text x="283" y="160" fill="#64748b" stroke="none" fontSize="7.5">OFF: V<tspan baselineShift="sub" fontSize="75%">CC</tspan> · ON: 0.2V</text>
 
             {/* Bottom calculation strip */}
             <rect x="25" y="244" width="355" height="34" rx="4" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="0.8" />
-            <text x="33" y="257" fill="#0f172a" stroke="none" fontSize="7.5" fontWeight="bold">• Base Drive: IB = (Vin - 0.7V) / RB</text>
-            <text x="33" y="269" fill="#0f172a" stroke="none" fontSize="7.5">• Saturation Condition: IB ≥ IC(sat) / βforced where IC(sat) ≈ VCC / RC</text>
+            <text x="33" y="257" fill="#0f172a" stroke="none" fontSize="7.5" fontWeight="bold">• Base Drive: I<tspan baselineShift="sub" fontSize="75%">B</tspan> = (V<tspan baselineShift="sub" fontSize="75%">in</tspan> - 0.7V) / R<tspan baselineShift="sub" fontSize="75%">B</tspan></text>
+            <text x="33" y="269" fill="#0f172a" stroke="none" fontSize="7.5">• Saturation Condition: I<tspan baselineShift="sub" fontSize="75%">B</tspan> ≥ I<tspan baselineShift="sub" fontSize="75%">C(sat)</tspan> / β<tspan baselineShift="sub" fontSize="75%">forced</tspan> where I<tspan baselineShift="sub" fontSize="75%">C(sat)</tspan> ≈ V<tspan baselineShift="sub" fontSize="75%">CC</tspan> / R<tspan baselineShift="sub" fontSize="75%">C</tspan></text>
           </g>
 
           {/* RIGHT: Operational States */}
@@ -2617,18 +2617,18 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           {/* OFF State Box */}
           <rect x="415" y="76" width="300" height="92" rx="5" fill="#fef2f2" stroke="#fecaca" strokeWidth="1" />
           <text x="425" y="93" fill="#991b1b" stroke="none" fontSize="9" fontWeight="bold">1. OFF State (Cutoff Region) - Switch OPEN:</text>
-          <text x="425" y="108" fill="#7f1d1d" stroke="none" fontSize="8">• Vin = 0V (or &lt; 0.5V) → Base-Emitter reverse biased</text>
-          <text x="425" y="122" fill="#7f1d1d" stroke="none" fontSize="8">• IB = 0 → Collector current IC = ICEO ≈ 0</text>
-          <text x="425" y="136" fill="#7f1d1d" stroke="none" fontSize="8">• Zero voltage drop across RC → Vout = VCE = VCC</text>
+          <text x="425" y="108" fill="#7f1d1d" stroke="none" fontSize="8">• V<tspan baselineShift="sub" fontSize="75%">in</tspan> = 0V (or &lt; 0.5V) → Base-Emitter reverse biased</text>
+          <text x="425" y="122" fill="#7f1d1d" stroke="none" fontSize="8">• I<tspan baselineShift="sub" fontSize="75%">B</tspan> = 0 → Collector current I<tspan baselineShift="sub" fontSize="75%">C</tspan> = I<tspan baselineShift="sub" fontSize="75%">CEO</tspan> ≈ 0</text>
+          <text x="425" y="136" fill="#7f1d1d" stroke="none" fontSize="8">• Zero voltage drop across R<tspan baselineShift="sub" fontSize="75%">C</tspan> → V<tspan baselineShift="sub" fontSize="75%">out</tspan> = V<tspan baselineShift="sub" fontSize="75%">CE</tspan> = V<tspan baselineShift="sub" fontSize="75%">CC</tspan></text>
           <text x="425" y="150" fill="#991b1b" stroke="none" fontSize="8" fontWeight="bold">• Load (LED / Motor) is OFF · Zero Power Dissipated</text>
 
           {/* ON State Box */}
           <rect x="415" y="178" width="300" height="98" rx="5" fill="#f0fdf4" stroke="#bbf7d0" strokeWidth="1" />
           <text x="425" y="195" fill="#166534" stroke="none" fontSize="9" fontWeight="bold">2. ON State (Saturation Region) - Switch CLOSED:</text>
-          <text x="425" y="210" fill="#14532d" stroke="none" fontSize="8">• Vin = HIGH (5V) → IB ≥ IC(sat) / βforced</text>
+          <text x="425" y="210" fill="#14532d" stroke="none" fontSize="8">• V<tspan baselineShift="sub" fontSize="75%">in</tspan> = HIGH (5V) → I<tspan baselineShift="sub" fontSize="75%">B</tspan> ≥ I<tspan baselineShift="sub" fontSize="75%">C(sat)</tspan> / β<tspan baselineShift="sub" fontSize="75%">forced</tspan></text>
           <text x="425" y="224" fill="#14532d" stroke="none" fontSize="8">• Both EB and CB forward-biased → Transistor fully saturates</text>
-          <text x="425" y="238" fill="#14532d" stroke="none" fontSize="8">• Vout = VCE(sat) ≈ 0.2V (Nearly a short to GND!)</text>
-          <text x="425" y="252" fill="#14532d" stroke="none" fontSize="8">• Full current IC = (VCC - 0.2V) / RC flows through Load</text>
+          <text x="425" y="238" fill="#14532d" stroke="none" fontSize="8">• V<tspan baselineShift="sub" fontSize="75%">out</tspan> = V<tspan baselineShift="sub" fontSize="75%">CE(sat)</tspan> ≈ 0.2V (Nearly a short to GND!)</text>
+          <text x="425" y="252" fill="#14532d" stroke="none" fontSize="8">• Full current I<tspan baselineShift="sub" fontSize="75%">C</tspan> = (V<tspan baselineShift="sub" fontSize="75%">CC</tspan> - 0.2V) / R<tspan baselineShift="sub" fontSize="75%">C</tspan> flows through Load</text>
           <text x="425" y="266" fill="#166534" stroke="none" fontSize="8" fontWeight="bold">• Load is fully turned ON</text>
         </svg>
       );
@@ -2647,7 +2647,7 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           {/* VCC Rail (+Vcc) */}
           <line x1="40" y1="36" x2="520" y2="36" stroke="#dc2626" strokeWidth="2" />
           <circle cx="520" cy="36" r="4" fill="#dc2626" />
-          <text x="530" y="40" fill="#dc2626" stroke="none" fontSize="11.5" fontWeight="bold">+Vcc</text>
+          <text x="530" y="40" fill="#dc2626" stroke="none" fontSize="11.5" fontWeight="bold">+V<tspan baselineShift="sub" fontSize="75%">CC</tspan></text>
           
           {/* GND Rail (0V) */}
           <line x1="40" y1="236" x2="520" y2="236" stroke="#1e293b" strokeWidth="2" />
@@ -2662,29 +2662,29 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           <line x1="150" y1="36" x2="150" y2="60" stroke="#1e293b" />
           <path d="M150 60 L142 66 L158 74 L142 82 L158 90 L150 96" stroke="#1e293b" strokeWidth="2" fill="none" />
           <line x1="150" y1="96" x2="150" y2="125" stroke="#1e293b" />
-          <text x="126" y="80" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">R1</text>
+          <text x="126" y="80" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">R<tspan baselineShift="sub" fontSize="75%">1</tspan></text>
           
           {/* Base Node B */}
           <circle cx="150" cy="125" r="3.5" fill="#1e293b" />
-          <text x="142" y="120" textAnchor="end" fill="#2563eb" stroke="none" fontSize="9" fontWeight="bold">VB</text>
+          <text x="142" y="120" textAnchor="end" fill="#2563eb" stroke="none" fontSize="9" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">B</tspan></text>
 
           {/* Resistor R2 (Lower Divider) */}
           <line x1="150" y1="125" x2="150" y2="148" stroke="#1e293b" />
           <path d="M150 148 L142 154 L158 162 L142 170 L158 178 L150 184" stroke="#1e293b" strokeWidth="2" fill="none" />
           <line x1="150" y1="184" x2="150" y2="236" stroke="#1e293b" />
           <circle cx="150" cy="236" r="3" fill="#1e293b" />
-          <text x="126" y="168" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">R2</text>
+          <text x="126" y="168" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">R<tspan baselineShift="sub" fontSize="75%">2</tspan></text>
           
           {/* Input Source Vin & Coupling Capacitor Cin */}
           <circle cx="45" cy="125" r="13" stroke="#2563eb" fill="#ffffff" />
           <path d="M38 125 Q42 119 45 125 T52 125" stroke="#2563eb" strokeWidth="1.5" fill="none" />
-          <text x="45" y="150" textAnchor="middle" fill="#2563eb" stroke="none" fontSize="9" fontWeight="bold">Vin</text>
+          <text x="45" y="150" textAnchor="middle" fill="#2563eb" stroke="none" fontSize="9" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">in</tspan></text>
           <line x1="58" y1="125" x2="88" y2="125" stroke="#1e293b" />
           {/* Cin Capacitor */}
           <line x1="88" y1="114" x2="88" y2="136" stroke="#0284c7" strokeWidth="2.5" />
           <line x1="95" y1="114" x2="95" y2="136" stroke="#0284c7" strokeWidth="2.5" />
           <line x1="95" y1="125" x2="150" y2="125" stroke="#1e293b" />
-          <text x="91" y="106" textAnchor="middle" fill="#0284c7" stroke="none" fontSize="9.5" fontWeight="bold">Cin</text>
+          <text x="91" y="106" textAnchor="middle" fill="#0284c7" stroke="none" fontSize="9.5" fontWeight="bold">C<tspan baselineShift="sub" fontSize="75%">in</tspan></text>
           
           {/* Base Wire to NPN BJT */}
           <line x1="150" y1="125" x2="222" y2="125" stroke="#1e293b" />
@@ -2705,7 +2705,7 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           <line x1="246" y1="36" x2="246" y2="52" stroke="#1e293b" />
           <path d="M246 52 L238 58 L254 66 L238 74 L254 82 L246 88" stroke="#1e293b" strokeWidth="2" fill="none" />
           <line x1="246" y1="88" x2="246" y2="90" stroke="#1e293b" />
-          <text x="262" y="72" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">RC</text>
+          <text x="262" y="72" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">R<tspan baselineShift="sub" fontSize="75%">C</tspan></text>
           
           {/* Collector Node C */}
           <circle cx="246" cy="90" r="3.5" fill="#1e293b" />
@@ -2714,7 +2714,7 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           <line x1="246" y1="90" x2="330" y2="90" stroke="#1e293b" />
           <line x1="330" y1="79" x2="330" y2="101" stroke="#0284c7" strokeWidth="2.5" />
           <line x1="337" y1="79" x2="337" y2="101" stroke="#0284c7" strokeWidth="2.5" />
-          <text x="333" y="73" textAnchor="middle" fill="#0284c7" stroke="none" fontSize="9.5" fontWeight="bold">Cout</text>
+          <text x="333" y="73" textAnchor="middle" fill="#0284c7" stroke="none" fontSize="9.5" fontWeight="bold">C<tspan baselineShift="sub" fontSize="75%">out</tspan></text>
 
           {/* Output Node after Cout */}
           <line x1="337" y1="90" x2="415" y2="90" stroke="#1e293b" />
@@ -2725,26 +2725,26 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           <path d="M415 135 L407 141 L423 149 L407 157 L423 165 L415 171" stroke="#1e293b" strokeWidth="2" fill="none" />
           <line x1="415" y1="171" x2="415" y2="236" stroke="#1e293b" />
           <circle cx="415" cy="236" r="3" fill="#1e293b" />
-          <text x="432" y="155" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">RL</text>
+          <text x="432" y="155" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">R<tspan baselineShift="sub" fontSize="75%">L</tspan></text>
 
           {/* Vout Output Terminal */}
           <line x1="415" y1="90" x2="480" y2="90" stroke="#2563eb" strokeWidth="2" />
           <circle cx="480" cy="90" r="4" fill="#2563eb" />
-          <text x="490" y="86" fill="#2563eb" stroke="none" fontSize="11" fontWeight="bold">Vout</text>
+          <text x="490" y="86" fill="#2563eb" stroke="none" fontSize="11" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">out</tspan></text>
           <text x="490" y="98" fill="#dc2626" stroke="none" fontSize="8" fontWeight="bold">(180° Inverted)</text>
           {/* Large Inverted Output Waveform */}
           <path d="M490 114 Q498 126 506 114 T522 114" stroke="#dc2626" strokeWidth="1.8" fill="none" />
 
           {/* Emitter Node E */}
           <circle cx="246" cy="160" r="3.5" fill="#1e293b" />
-          <text x="238" y="165" textAnchor="end" fill="#dc2626" stroke="none" fontSize="9" fontWeight="bold">VE</text>
+          <text x="238" y="165" textAnchor="end" fill="#dc2626" stroke="none" fontSize="9" fontWeight="bold">V<tspan baselineShift="sub" fontSize="75%">E</tspan></text>
 
           {/* Emitter Resistor RE */}
           <line x1="246" y1="160" x2="246" y2="178" stroke="#1e293b" />
           <path d="M246 178 L238 184 L254 192 L238 200 L254 208 L246 214" stroke="#1e293b" strokeWidth="2" fill="none" />
           <line x1="246" y1="214" x2="246" y2="236" stroke="#1e293b" />
           <circle cx="246" cy="236" r="3" fill="#1e293b" />
-          <text x="220" y="198" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">RE</text>
+          <text x="220" y="198" fill="#1e293b" stroke="none" fontSize="10.5" fontWeight="bold">R<tspan baselineShift="sub" fontSize="75%">E</tspan></text>
           
           {/* Parallel Bypass Capacitor CE */}
           <line x1="246" y1="160" x2="295" y2="160" stroke="#1e293b" />
@@ -2753,12 +2753,12 @@ export const CircuitDiagramSvg: React.FC<{ circuitId: string; className?: string
           <line x1="287" y1="195" x2="303" y2="195" stroke="#0284c7" strokeWidth="2.5" />
           <line x1="295" y1="195" x2="295" y2="236" stroke="#1e293b" />
           <circle cx="295" cy="236" r="3" fill="#1e293b" />
-          <text x="312" y="195" fill="#0284c7" stroke="none" fontSize="9.5" fontWeight="bold">CE</text>
+          <text x="312" y="195" fill="#0284c7" stroke="none" fontSize="9.5" fontWeight="bold">C<tspan baselineShift="sub" fontSize="75%">E</tspan></text>
           <text x="312" y="206" fill="#64748b" stroke="none" fontSize="7.5">(Bypass)</text>
 
           {/* Key Formula Footer */}
           <text x="290" y="275" textAnchor="middle" fill="#0f172a" stroke="none" fontSize="10" fontWeight="600">
-            Gain: Av ≈ - (RC || RL) / re' · Rin ≈ R1 || R2 || (β·re') · DC Stability: S ≈ 1 + (RB / RE)
+            Gain: A<tspan baselineShift="sub" fontSize="75%">v</tspan> ≈ - (R<tspan baselineShift="sub" fontSize="75%">C</tspan> || R<tspan baselineShift="sub" fontSize="75%">L</tspan>) / r<tspan baselineShift="sub" fontSize="75%">e</tspan>' · R<tspan baselineShift="sub" fontSize="75%">in</tspan> ≈ R<tspan baselineShift="sub" fontSize="75%">1</tspan> || R<tspan baselineShift="sub" fontSize="75%">2</tspan> || (β·r<tspan baselineShift="sub" fontSize="75%">e</tspan>') · DC Stability: S ≈ 1 + (R<tspan baselineShift="sub" fontSize="75%">B</tspan> / R<tspan baselineShift="sub" fontSize="75%">E</tspan>)
           </text>
         </svg>
       );

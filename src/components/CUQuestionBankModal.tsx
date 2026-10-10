@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { CU_QUESTION_BANK_2024 } from '../data/questionBank2024';
 import { CU_DRIVE_FOLDER_URL } from '../data/coursesData';
+import { formatElectronicText } from '../utils/electronicNotation';
 
 interface CUQuestionBankModalProps {
   isOpen: boolean;
@@ -258,7 +259,7 @@ export const CUQuestionBankModal: React.FC<CUQuestionBankModalProps> = ({
 
                     {/* Question text */}
                     <h3 className="font-semibold text-slate-900 text-sm leading-snug">
-                      {q.question}
+                      {formatElectronicText(q.question)}
                     </h3>
 
                     {/* Solution / Answer Guide */}
@@ -268,7 +269,7 @@ export const CUQuestionBankModal: React.FC<CUQuestionBankModalProps> = ({
                         <span>CU Examiner Solution Guide & Key Points:</span>
                       </div>
                       <p className="text-slate-700 leading-relaxed font-sans">
-                        {q.answerHint}
+                        {formatElectronicText(q.answerHint)}
                       </p>
                     </div>
                   </div>

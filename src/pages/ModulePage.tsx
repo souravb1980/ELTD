@@ -30,6 +30,7 @@ import { OpAmpGainSim } from '../components/InteractiveSimulators/OpAmpGainSim';
 import { LogicGateSim } from '../components/InteractiveSimulators/LogicGateSim';
 import { CommunicationSim } from '../components/InteractiveSimulators/CommunicationSim';
 import { CU_QUESTION_BANK_2024 } from '../data/questionBank2024';
+import { formatElectronicText } from '../utils/electronicNotation';
 
 interface ModulePageProps {
   module: CourseModule;
@@ -416,7 +417,7 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                     <span className="w-4 h-4 rounded-full bg-blue-100 text-blue-900 font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
                       {i + 1}
                     </span>
-                    <span className="leading-relaxed">{obj}</span>
+                    <span className="leading-relaxed">{formatElectronicText(obj)}</span>
                   </li>
                 ))}
               </ul>
@@ -458,7 +459,7 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                   </div>
 
                   <p className="text-sm text-slate-700 leading-relaxed font-sans">
-                    {section.summary}
+                    {formatElectronicText(section.summary)}
                   </p>
 
                   <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-2">
@@ -467,7 +468,7 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                       {section.keyPoints.map((pt, ptIdx) => (
                         <li key={ptIdx} className="flex items-start gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-blue-700 shrink-0 mt-1.5"></span>
-                          <span className="leading-relaxed">{pt}</span>
+                          <span className="leading-relaxed">{formatElectronicText(pt)}</span>
                         </li>
                       ))}
                     </ul>
@@ -561,7 +562,7 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                       <div>
                         <span className="font-semibold text-slate-700">Governing Relation: </span>
                         <code className="text-blue-900 bg-blue-50 px-1.5 py-0.5 rounded font-mono text-[11px]">
-                          {sym.keyFormula}
+                          {formatElectronicText(sym.keyFormula)}
                         </code>
                       </div>
                     )}
@@ -613,14 +614,14 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                       Circuit Working & Analysis:
                     </h4>
                     <p className="text-xs text-slate-700 leading-relaxed font-sans">
-                      {circ.description}
+                      {formatElectronicText(circ.description)}
                     </p>
 
                     <div className="space-y-1.5 text-xs text-slate-600">
                       {circ.keyOperation.map((step, sIdx) => (
                         <div key={sIdx} className="flex items-start gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0 mt-1.5"></span>
-                          <span>{step}</span>
+                          <span>{formatElectronicText(step)}</span>
                         </div>
                       ))}
                     </div>
@@ -630,15 +631,15 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 border-t border-slate-100 text-xs">
                     <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                       <span className="text-xs font-bold text-blue-950 block mb-1">Transfer Relation:</span>
-                      <code className="text-blue-900 font-mono font-semibold block">{circ.inputOutputRelation}</code>
-                      <code className="text-slate-600 font-mono text-[11px] block mt-1">{circ.formula}</code>
+                      <code className="text-blue-900 font-mono font-semibold block">{formatElectronicText(circ.inputOutputRelation)}</code>
+                      <code className="text-slate-600 font-mono text-[11px] block mt-1">{formatElectronicText(circ.formula)}</code>
                     </div>
 
                     <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg">
                       <span className="text-xs font-bold text-slate-900 block mb-1">Components Used:</span>
                       <ul className="text-slate-600 list-disc list-inside space-y-0.5 text-[11px]">
                         {circ.components.map((c, cIdx) => (
-                          <li key={cIdx}>{c}</li>
+                          <li key={cIdx}>{formatElectronicText(c)}</li>
                         ))}
                       </ul>
                     </div>
@@ -648,7 +649,7 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                   {circ.cuExamTip && (
                     <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-900 flex items-start gap-2">
                       <Sparkles className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                      <span><strong>CU Exam Tip:</strong> {circ.cuExamTip}</span>
+                      <span><strong>CU Exam Tip:</strong> {formatElectronicText(circ.cuExamTip)}</span>
                     </div>
                   )}
                 </div>
@@ -701,12 +702,12 @@ export const ModulePage: React.FC<ModulePageProps> = ({
 
                     <div className="my-3 p-3 bg-blue-50/60 border border-blue-100 rounded-lg text-center">
                       <span className="text-base font-mono font-bold text-blue-950 block">
-                        {form.formula}
+                        {formatElectronicText(form.formula)}
                       </span>
                     </div>
 
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      {form.explanation}
+                      {formatElectronicText(form.explanation)}
                     </p>
                   </div>
 
@@ -877,7 +878,7 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                         </div>
 
                         <h3 className="font-semibold text-slate-900 text-sm leading-snug">
-                          {q.question}
+                          {formatElectronicText(q.question)}
                         </h3>
 
                         <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-xs space-y-1">
@@ -886,7 +887,7 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                             <span>CU Examiner Solution Guide & Key Points:</span>
                           </span>
                           <p className="text-slate-700 leading-relaxed font-sans">
-                            {q.answerHint}
+                            {formatElectronicText(q.answerHint)}
                           </p>
                         </div>
                       </div>
@@ -968,7 +969,7 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                         </div>
 
                         <h3 className="font-semibold text-slate-900 text-sm leading-snug">
-                          {q.question}
+                          {formatElectronicText(q.question)}
                         </h3>
 
                         <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-xs space-y-1">
@@ -977,7 +978,7 @@ export const ModulePage: React.FC<ModulePageProps> = ({
                             <span>CU Examiner Solution Guide & Key Points:</span>
                           </span>
                           <p className="text-slate-700 leading-relaxed font-sans">
-                            {q.answerHint}
+                            {formatElectronicText(q.answerHint)}
                           </p>
                         </div>
                       </div>
