@@ -1,0 +1,6 @@
+{
+  "name": "IDC Electronics (ELTD) - University of Calcutta",
+  "description": "Comprehensive academic learning and reference portal for IDC Electronics (ELTD) course, University of Calcutta (Semesters I, II, III) with detailed syllabus, exam modalities, circuit diagrams, and interactive tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

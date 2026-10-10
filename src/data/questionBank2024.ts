@@ -1,0 +1,897 @@
+import { UniversityQuestion } from '../types';
+
+export const CU_QUESTION_BANK_2024: (UniversityQuestion & { moduleId: string; moduleName: string })[] = [
+  // Page 1: Questions 1 to 19 (Basic Circuit Components)
+  {
+    id: "cu24_q1",
+    qNumber: 1,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Fundamental Concepts",
+    topicTag: "Electrical vs Electronics",
+    question: "What is the basic difference between Electrical and Electronics?",
+    answerHint: "Electrical devices convert electrical energy primarily into other forms of energy (mechanical, heat, light) using passive metallic conductors (copper, aluminum) at high power levels (e.g. motors, heaters, transformers) with electron flow through conductors. Electronics deals with the control of electron and hole flow through semiconductors, vacuum tubes, or gases at relatively low voltages/currents to process, amplify, switch, or transmit information and signals (e.g. transistors, diodes, microprocessors)."
+  },
+  {
+    id: "cu24_q2",
+    qNumber: 2,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Domestic AC Supply",
+    topicTag: "Mains Parameters",
+    question: "Write the voltage and frequency of the domestic power supply in India.",
+    answerHint: "In India, the standard domestic single-phase AC power supply operates at a nominal RMS voltage of 230 V (±10%, i.e. 220 V - 240 V) and a frequency of 50 Hz (cycles per second)."
+  },
+  {
+    id: "cu24_q3",
+    qNumber: 3,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Resistor Color Coding",
+    topicTag: "Numerical Problem",
+    question: "Calculate the value of the resistance with color code Green Violet Brown and Gold.",
+    answerHint: "Band 1: Green = 5; Band 2: Violet = 7; Band 3 (Multiplier): Brown = 10¹ = 10; Band 4 (Tolerance): Gold = ±5%. Calculated resistance = (57 × 10) Ω ± 5% = 570 Ω ± 5% (541.5 Ω to 598.5 Ω)."
+  },
+  {
+    id: "cu24_q4",
+    qNumber: 4,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Resistor Color Coding",
+    topicTag: "Numerical Problem",
+    question: "Write the color code for 820±10%.",
+    answerHint: "Resistance = 820 Ω ± 10% = 82 × 10¹ Ω ± 10%. Band 1 (Digit 8) = Gray; Band 2 (Digit 2) = Red; Band 3 (Multiplier ×10¹) = Brown; Band 4 (Tolerance ±10%) = Silver. Hence, the color sequence is: Gray, Red, Brown, Silver."
+  },
+  {
+    id: "cu24_q5",
+    qNumber: 5,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Units & Dimensions",
+    topicTag: "Resistor Unit",
+    question: "Write the unit of the resistance.",
+    answerHint: "The SI unit of electrical resistance is the Ohm (symbol: Ω). Derived multiples include kilo-ohm (1 kΩ = 10³ Ω) and mega-ohm (1 MΩ = 10⁶ Ω)."
+  },
+  {
+    id: "cu24_q6",
+    qNumber: 6,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Component Symbols",
+    topicTag: "Resistor Symbol",
+    question: "Draw the symbol of the resistance.",
+    answerHint: "Resistor symbol: Zig-zag line with two lead terminals (IEEE standard) or an empty rectangular box (IEC standard). Variable resistance (rheostat/potentiometer) is drawn with a diagonal arrow or wiper arrow touching the body."
+  },
+  {
+    id: "cu24_q7",
+    qNumber: 7,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Units & Dimensions",
+    topicTag: "Capacitance Unit",
+    question: "Write the unit of the capacitance.",
+    answerHint: "The SI unit of capacitance is the Farad (symbol: F). Since 1 Farad is exceptionally large, practical subunits are microfarad (1 μF = 10⁻⁶ F), nanofarad (1 nF = 10⁻⁹ F), and picofarad (1 pF = 10⁻¹² F)."
+  },
+  {
+    id: "cu24_q8",
+    qNumber: 8,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Component Symbols",
+    topicTag: "Capacitor Symbol",
+    question: "Draw the symbol of the capacitor both polar and non polar.",
+    answerHint: "Non-polar capacitor (ceramic, mica, polyester): Two identical parallel straight plates perpendicular to connecting leads. Polar capacitor (electrolytic, tantalum): One straight plate (marked with a '+' positive terminal) and one curved plate (representing negative cathode terminal)."
+  },
+  {
+    id: "cu24_q9",
+    qNumber: 9,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Units & Dimensions",
+    topicTag: "Inductance Unit",
+    question: "Write the unit of the Inductance.",
+    answerHint: "The SI unit of electrical inductance (both self and mutual inductance) is the Henry (symbol: H). Practical subunits include millihenry (1 mH = 10⁻³ H) and microhenry (1 μH = 10⁻⁶ H)."
+  },
+  {
+    id: "cu24_q10",
+    qNumber: 10,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Component Symbols",
+    topicTag: "Inductor Symbol",
+    question: "Draw the symbol of the Inductor.",
+    answerHint: "An inductor symbol is drawn as a series of curved loops / semicircular coiled wire turns. An iron-core inductor adds two parallel straight lines over the coils; a ferrite-core inductor uses dashed lines."
+  },
+  {
+    id: "cu24_q11",
+    qNumber: 11,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Component Symbols",
+    topicTag: "Transformer Symbol",
+    question: "Draw the symbol of transformer.",
+    answerHint: "Transformer symbol: Two distinct spiral inductors placed parallel to each other facing inward, separated by two solid vertical lines representing the laminated magnetic iron core (Primary winding on left with terminals Vp, secondary winding on right with terminals Vs)."
+  },
+  {
+    id: "cu24_q12",
+    qNumber: 12,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Transformers",
+    topicTag: "Step-Up & Step-Down",
+    question: "What is step up and step down transformer?",
+    answerHint: "Step-Up Transformer: A transformer in which the secondary turns exceed the primary turns (Ns > Np), producing an output voltage greater than the input voltage (Vs > Vp, Is < Ip). Step-Down Transformer: A transformer in which the secondary turns are fewer than the primary turns (Ns < Np), producing an output voltage smaller than the input voltage (Vs < Vp, Is > Ip). Transformation ratio: k = Ns / Np = Vs / Vp = Ip / Is."
+  },
+  {
+    id: "cu24_q13",
+    qNumber: 13,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Network Analysis",
+    topicTag: "Series Resistors",
+    question: "Calculate the equivalent resistance of the three series resistances R1, R2, R3.",
+    answerHint: "In a series connection, the same current I flows through each resistor. Total voltage drop: V = V1 + V2 + V3 = I·R1 + I·R2 + I·R3 = I·(R1 + R2 + R3). Since V = I·Req, equivalent resistance is: Req = R1 + R2 + R3. Req is always larger than the largest individual resistance."
+  },
+  {
+    id: "cu24_q14",
+    qNumber: 14,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Network Analysis",
+    topicTag: "Parallel Resistors",
+    question: "Calculate the equivalent resistance of the three parallel resistances R1, R2, R3.",
+    answerHint: "In a parallel connection, all resistors share the same potential difference V. Total current: I = I1 + I2 + I3 = (V/R1) + (V/R2) + (V/R3) = V · (1/R1 + 1/R2 + 1/R3). Since I = V/Req: 1/Req = 1/R1 + 1/R2 + 1/R3, or Req = (R1 · R2 · R3) / (R1·R2 + R2·R3 + R3·R1). Req is always smaller than the smallest individual resistance."
+  },
+  {
+    id: "cu24_q15",
+    qNumber: 15,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Impedance Analysis",
+    topicTag: "R-L Circuits",
+    question: "Calculate the equivalent impedance of series R-L and parallel R-L circuits",
+    answerHint: "Series R-L: Complex impedance Z_series = R + jXL = R + j(ωL). Magnitude: |Z_series| = √(R² + XL²) = √(R² + (2πfL)²); Phase angle θ = tan⁻¹(XL / R) (Voltage leads current). Parallel R-L: Admittance Y = 1/R + 1/(jXL) = 1/R - j(1/XL). Equivalent impedance: Z_parallel = 1 / Y = (R · jXL) / (R + jXL). Magnitude: |Z_parallel| = (R · XL) / √(R² + XL²)."
+  },
+  {
+    id: "cu24_q16",
+    qNumber: 16,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Impedance Analysis",
+    topicTag: "R-C Circuits",
+    question: "Calculate the equivalent impedance of series R-C and parallel R-C circuits",
+    answerHint: "Series R-C: Complex impedance Z_series = R - jXc = R - j[1/(ωC)]. Magnitude: |Z_series| = √(R² + Xc²) = √[R² + (1/(2πfC))²]; Phase angle θ = -tan⁻¹(Xc / R) (Current leads voltage). Parallel R-C: Admittance Y = 1/R + jωC = 1/R + j(1/Xc). Equivalent impedance: Z_parallel = (R · (-jXc)) / (R - jXc) = [R · (1/jωC)] / [R + 1/(jωC)] = R / (1 + jωCR). Magnitude: |Z_parallel| = (R · Xc) / √(R² + Xc²)."
+  },
+  {
+    id: "cu24_q17",
+    qNumber: 17,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Impedance Analysis",
+    topicTag: "Series R-L-C",
+    question: "Calculate the equivalent impedance of series R-L-C circuits",
+    answerHint: "For series R-L-C: Z = R + j(XL - Xc) = R + j[ωL - 1/(ωC)]. Magnitude: |Z| = √[R² + (XL - Xc)²] = √[R² + (2πfL - 1/(2πfC))²]. Phase angle: θ = tan⁻¹[(XL - Xc) / R]. At resonance (XL = Xc): net reactance is zero, impedance is purely resistive and minimum Z = R, and resonant frequency is f₀ = 1 / (2π√[LC])."
+  },
+  {
+    id: "cu24_q18",
+    qNumber: 18,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Circuit Symbols",
+    topicTag: "Grounding Types",
+    question: "Write the name of different types of ground and draw it.",
+    answerHint: "1. Earth Ground (Physical Ground): Connected directly to the physical soil of the earth via an electrode rod for safety (Symbol: 3 descending horizontal lines decreasing in width); 2. Chassis Ground: Connected to the metallic housing or enclosure of an instrument/appliance (Symbol: rake-like lines angled at 45°); 3. Signal Ground / Common Ground: Return path serving as the 0V reference potential for low-level electronic signals (Symbol: hollow triangle or inverted solid triangle)."
+  },
+  {
+    id: "cu24_q19",
+    qNumber: 19,
+    year: "CU 2024",
+    moduleId: "basic_circuit_components",
+    moduleName: "Basic Circuit Components",
+    group: "Fundamental Circuit Laws",
+    topicTag: "KCL & KVL",
+    question: "State KCL and KVL.",
+    answerHint: "Kirchhoff's Current Law (KCL): 'The algebraic sum of all electric currents entering and leaving any node or junction in an electric circuit is zero.' Equation: Σ I_in = Σ I_out or Σ I = 0 (Based on Conservation of Electric Charge). Kirchhoff's Voltage Law (KVL): 'The algebraic sum of all potential differences (voltage sources and IR drops) around any closed loop or mesh in an electric circuit is zero.' Equation: Σ V = 0 or Σ V_sources = Σ (I · R_drops) (Based on Conservation of Energy)."
+  },
+
+  // Page 1-2: Questions 20 to 39 (Semiconductor Devices & Circuits)
+  {
+    id: "cu24_q20",
+    qNumber: 20,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Semiconductor Physics",
+    topicTag: "Materials",
+    question: "Write the name of two semiconductor materials.",
+    answerHint: "1. Silicon (Si) - Bandgap Eg ≈ 1.12 eV at 300K; 2. Germanium (Ge) - Bandgap Eg ≈ 0.67 eV at 300K. (Compound alternatives: Gallium Arsenide GaAs, Indium Phosphide InP)."
+  },
+  {
+    id: "cu24_q21",
+    qNumber: 21,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Semiconductor Physics",
+    topicTag: "Band Theory",
+    question: "What are the difference between Conductor, Semiconductor and Insulator?",
+    answerHint: "1. Conductor (e.g. Cu, Al): Conduction and valence bands overlap (forbidden energy gap Eg = 0 eV), high conductivity (~10⁶-10⁸ S/m), positive temperature coefficient of resistance (PTC). 2. Semiconductor (e.g. Si, Ge): Small forbidden energy gap (Eg ≈ 1 eV), moderate conductivity, negative temperature coefficient of resistance (NTC). 3. Insulator (e.g. Glass, Wood, Quartz): Extremely wide forbidden energy gap (Eg > 5 eV), negligible free carriers at room temperature, exceptionally high resistivity."
+  },
+  {
+    id: "cu24_q22",
+    qNumber: 22,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Semiconductor Physics",
+    topicTag: "Intrinsic vs Extrinsic",
+    question: "What are pure semiconductor and impure semiconductor?",
+    answerHint: "Pure (Intrinsic) Semiconductor: An extremely pure crystal (e.g. pure Silicon or Germanium) free from significant impurities or lattice defects, where electron concentration equals hole concentration (n = p = ni). Impure (Extrinsic) Semiconductor: An intrinsic semiconductor deliberately doped with a controlled small quantity of trivalent (p-type) or pentavalent (n-type) impurity atoms to dramatically increase its electrical conductivity."
+  },
+  {
+    id: "cu24_q23",
+    qNumber: 23,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Semiconductor Physics",
+    topicTag: "P-type and N-type",
+    question: "What is p-type and n-type semiconductor?",
+    answerHint: "p-type semiconductor: Formed by doping pure silicon/germanium with trivalent impurity atoms (Group 13 elements: Boron, Aluminum, Gallium, Indium). Creates excess empty states called 'holes'. Majority carriers are holes; minority carriers are electrons. n-type semiconductor: Formed by doping pure silicon/germanium with pentavalent impurity atoms (Group 15 elements: Phosphorus, Arsenic, Antimony). Donates free conduction electrons. Majority carriers are electrons; minority carriers are holes."
+  },
+  {
+    id: "cu24_q24",
+    qNumber: 24,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Semiconductor Physics",
+    topicTag: "Compound Semiconductors",
+    question: "What is compound semiconductor?",
+    answerHint: "A compound semiconductor is composed of chemical compounds formed from two or more distinct elements from different groups of the periodic table, such as Group III-V compounds (Gallium Arsenide GaAs, Indium Phosphide InP, Gallium Nitride GaN) or Group II-VI compounds (Cadmium Telluride CdTe, Zinc Selenide ZnSe). They feature direct bandgaps suitable for high-speed RF devices, LEDs, lasers, and optoelectronics."
+  },
+  {
+    id: "cu24_q25",
+    qNumber: 25,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Component Symbols",
+    topicTag: "Diode Symbol",
+    question: "Draw the symbol of p-n junction diode.",
+    answerHint: "Symbol consists of a triangle pointing in the direction of conventional forward current flow (representing the p-type Anode, A) terminating at a vertical line perpendicular to the lead (representing the n-type Cathode, K)."
+  },
+  {
+    id: "cu24_q26",
+    qNumber: 26,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Diode Biasing",
+    topicTag: "Forward and Reverse Bias",
+    question: "Draw the forward bias and reverse bias of p-n junction.",
+    answerHint: "Forward Bias: The positive terminal of an external DC voltage source is connected to the p-side (anode) and the negative terminal to the n-side (cathode). This opposes the built-in potential, narrows the space-charge depletion layer, and allows large forward diffusion current. Reverse Bias: The positive terminal is connected to the n-side and the negative terminal to the p-side. This widens the depletion layer, raises barrier height, and limits current to a tiny minority leakage current I0."
+  },
+  {
+    id: "cu24_q27",
+    qNumber: 27,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Characteristics",
+    topicTag: "V-I Curve",
+    question: "Draw the V-I characteristics of p-n junction.",
+    answerHint: "Graph of Diode Current I (y-axis) vs Voltage V (x-axis): 1st Quadrant (Forward): Current remains near zero until knee/cut-in voltage (0.7V for Si, 0.3V for Ge), then increases exponentially governed by Shockley's equation I = I0 [exp(V/ηVT) - 1]. 3rd Quadrant (Reverse): Tiny reverse saturation current I0 (nanoamperes in Si) flows until the reverse breakdown voltage Vbr is reached, where current increases drastically."
+  },
+  {
+    id: "cu24_q28",
+    qNumber: 28,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Diode Parameters",
+    topicTag: "Cut-in / Knee Voltage",
+    question: "What is cut-in voltage or knee voltage of a diode?",
+    answerHint: "Cut-in voltage (also called knee voltage or threshold voltage, Vγ) is the minimum forward bias voltage across a P-N junction at which the internal electrostatic barrier potential is overcome and forward current begins to rise sharply and conduct heavily."
+  },
+  {
+    id: "cu24_q29",
+    qNumber: 29,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Diode Parameters",
+    topicTag: "Values of Cut-in Voltage",
+    question: "Write the value of cut-in voltage for Ge and Si.",
+    answerHint: "At room temperature (300 K): For Silicon (Si): Vγ ≈ 0.7 V; For Germanium (Ge): Vγ ≈ 0.3 V."
+  },
+  {
+    id: "cu24_q30",
+    qNumber: 30,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Semiconductor Physics",
+    topicTag: "Carrier Types",
+    question: "What are the Majority carrier and minority carrier?",
+    answerHint: "Majority carriers are the charge carriers present in substantially higher concentration due to deliberate doping (electrons in n-type semiconductor, holes in p-type semiconductor). Minority carriers are the charge carriers present in relatively small concentrations formed primarily by thermal generation (holes in n-type semiconductor, electrons in p-type semiconductor)."
+  },
+  {
+    id: "cu24_q31",
+    qNumber: 31,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Rectifiers",
+    topicTag: "Definition & Types",
+    question: "What is Rectifier? Name the different types of rectifier.",
+    answerHint: "A rectifier is an electrical circuit using semiconductor diodes to convert bidirectional alternating current (AC) into unidirectional pulsating direct current (DC). Types: 1. Half-Wave Rectifier (1 diode); 2. Full-Wave Center-Tapped Rectifier (2 diodes + center-tapped transformer); 3. Full-Wave Bridge Rectifier (4 diodes in a closed bridge loop)."
+  },
+  {
+    id: "cu24_q32",
+    qNumber: 32,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Rectifiers",
+    topicTag: "Full Wave Voltages",
+    question: "Draw the full wave rectifier and draw the input and output voltages.",
+    answerHint: "Input voltage: Sinusoidal AC wave vs(t) = Vm sin(ωt) alternating between +Vm and -Vm. Output voltage: All negative half-cycles are inverted so that load voltage vL(t) consists of consecutive positive pulses reaching peak Vm with fundamental frequency 2·f (100 Hz for 50 Hz AC). Average DC output Vdc = 2Vm / π ≈ 0.636 Vm."
+  },
+  {
+    id: "cu24_q33",
+    qNumber: 33,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Power Supplies",
+    topicTag: "Filter Purpose",
+    question: "Why filter is used in rectifier?",
+    answerHint: "The output of a rectifier is pulsating DC containing large AC ripple components (ripple factor γ = 0.482 for full-wave, 1.21 for half-wave). A filter (such as a shunt capacitor C or series inductor L) is used to bypass/block the unwanted AC harmonic fluctuations, smoothing the pulsating DC into a steady, continuous DC voltage suitable for electronic circuits."
+  },
+  {
+    id: "cu24_q34",
+    qNumber: 34,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Special Diodes",
+    topicTag: "LED",
+    question: "What is light emitting diode?",
+    answerHint: "A Light Emitting Diode (LED) is a heavily doped, direct bandgap P-N junction diode (e.g. GaAsP, GaN) that emits visible or infrared light under forward bias through electroluminescence (injected electrons and holes recombine across the bandgap, releasing photon energy E = h·ν = hc/λ)."
+  },
+  {
+    id: "cu24_q35",
+    qNumber: 35,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Special Diodes",
+    topicTag: "Zener Diode",
+    question: "What is Zener diode?",
+    answerHint: "A Zener diode is a specially designed, heavily doped silicon P-N junction diode engineered to operate continuously in the reverse breakdown region without damage. In breakdown, the voltage across it remains practically constant (Zener breakdown voltage, Vz) over a wide range of reverse currents, making it ideal as a voltage regulator."
+  },
+  {
+    id: "cu24_q36",
+    qNumber: 36,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Special Diodes",
+    topicTag: "Solar Cell",
+    question: "What is solar cell?",
+    answerHint: "A solar cell (photovoltaic cell) is an un-biased semiconductor P-N junction device that directly converts incident light (solar optical radiation) into electrical energy via the photovoltaic effect (incident photons generate electron-hole pairs in the depletion region, separated by built-in electric field to produce photovoltage and photocurrent)."
+  },
+  {
+    id: "cu24_q37",
+    qNumber: 37,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Rectifiers",
+    topicTag: "Rectifier Classification",
+    question: "Write the name of different types of rectifier.",
+    answerHint: "1. Half-Wave Rectifier (Single diode, conducts during positive half-cycle only); 2. Full-Wave Center-Tapped Rectifier (Two diodes with center-tapped transformer secondary); 3. Full-Wave Bridge Rectifier (Four diodes connected in a closed bridge loop, requiring no center-tapped transformer)."
+  },
+  {
+    id: "cu24_q38",
+    qNumber: 38,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Rectifiers",
+    topicTag: "Bridge Working",
+    question: "Draw the circuit diagram of full wave rectifier and explain how it works.",
+    answerHint: "Bridge Rectifier Working: 4 diodes D1, D2, D3, D4 arranged in a bridge. During positive half-cycle of AC input: Top terminal is positive, D1 and D2 are forward biased and conduct, carrying current from top through load RL to bottom. D3 and D4 are reverse biased. During negative half-cycle: Bottom terminal is positive, D3 and D4 are forward biased and conduct, directing current through load RL in the exact same direction. Output current is unidirectional full-wave DC."
+  },
+  {
+    id: "cu24_q39",
+    qNumber: 39,
+    year: "CU 2024",
+    moduleId: "semiconductor_devices_circuits",
+    moduleName: "Semiconductor Devices & Circuits",
+    group: "Rectifiers",
+    topicTag: "Waveforms",
+    question: "Draw the input output voltage waveform of full wave rectifier.",
+    answerHint: "Input waveform: Continuous sinusoidal AC wave vi = Vm sin(ωt) with alternating polarity (T = 1/f). Output waveform: Periodic series of positive half-sine pulses v0 = |Vm sin(ωt)| with frequency 2f (100 Hz), ripple factor γ = 0.482, peak inverse voltage PIV = Vm (for bridge) or 2Vm (for center-tapped)."
+  },
+
+  // Page 2: Questions 40 to 50 (Bipolar Junction Transistors - BJT)
+  {
+    id: "cu24_q40",
+    qNumber: 40,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "BJT Fundamentals",
+    topicTag: "Junction Count",
+    question: "How many p-n junctions within a transistor?",
+    answerHint: "A bipolar junction transistor (BJT) consists of two back-to-back p-n junctions: 1. The Emitter-Base (E-B) junction; 2. The Collector-Base (C-B) junction."
+  },
+  {
+    id: "cu24_q41",
+    qNumber: 41,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "Component Symbols",
+    topicTag: "NPN vs PNP Symbols",
+    question: "Draw the symbol of p-n-p and n-p-n transistor.",
+    answerHint: "NPN Transistor: Arrow on the Emitter lead points OUTWARD (away from base, indicating electron flow inwards). PNP Transistor: Arrow on the Emitter lead points INWARD (toward base, indicating direction of conventional hole current)."
+  },
+  {
+    id: "cu24_q42",
+    qNumber: 42,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "BJT Construction",
+    topicTag: "Three Regions",
+    question: "Write the name of three regions of a transistor.",
+    answerHint: "1. Emitter (E): Heavily doped, moderate physical size, function is to emit majority charge carriers into the base; 2. Base (B): Central region, exceptionally thin (~microns) and very lightly doped, controls carrier flow; 3. Collector (C): Moderately doped, largest physical area to dissipate heat, collects majority carriers from the base."
+  },
+  {
+    id: "cu24_q43",
+    qNumber: 43,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "Configurations",
+    topicTag: "CB, CE, CC Circuits",
+    question: "Draw the Common base, Common Emitter, Common collector configuration.",
+    answerHint: "1. Common Base (CB): Base is common to both input (emitter-base) and output (collector-base); low input impedance, high output impedance, current gain α < 1. 2. Common Emitter (CE): Emitter is common; input to base, output from collector; high voltage and current gain, 180° phase inversion. 3. Common Collector (CC / Emitter Follower): Collector is common; input to base, output from emitter; high input impedance, low output impedance, unity voltage gain."
+  },
+  {
+    id: "cu24_q44",
+    qNumber: 44,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "Applications",
+    topicTag: "Transistor Applications",
+    question: "Write two applications of a transistor.",
+    answerHint: "1. Linear Signal Amplifier: Amplifying weak audio, RF, or sensor voltages/currents (operates in active region); 2. Electronic Switch: Switching loads ON (saturation region, closed switch) and OFF (cutoff region, open switch) in digital computers, logic gates, and relay drivers."
+  },
+  {
+    id: "cu24_q45",
+    qNumber: 45,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "Current Gains",
+    topicTag: "Alpha and Beta Definition",
+    question: "Define α and β.",
+    answerHint: "Alpha (α): Large-signal DC current gain in Common Base (CB) configuration, defined as the ratio of collector current to emitter current: α = IC / IE (typically 0.95 to 0.998). Beta (β / hFE): DC current gain in Common Emitter (CE) configuration, defined as the ratio of collector current to base current: β = IC / IB (typically 50 to 500)."
+  },
+  {
+    id: "cu24_q46",
+    qNumber: 46,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "Current Gains",
+    topicTag: "Alpha-Beta Relation",
+    question: "Draw the relation between α and β.",
+    answerHint: "Derivation: Since IE = IB + IC, divide throughout by IC: (IE / IC) = (IB / IC) + 1. Substituting α = IC/IE and β = IC/IB: 1/α = 1/β + 1 = (1 + β) / β. Therefore: α = β / (1 + β) and β = α / (1 - α)."
+  },
+  {
+    id: "cu24_q47",
+    qNumber: 47,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "Biasing",
+    topicTag: "Biasing Definition",
+    question: "What is biasing of a transistor?",
+    answerHint: "Biasing is the application of appropriate external DC voltages to the emitter-base and collector-base junctions of a transistor to establish a stable quiescent DC operating point (Q-point) with proper currents (IB, IC) and voltages (VCE) so that AC signals can be amplified linearly without clipping distortion."
+  },
+  {
+    id: "cu24_q48",
+    qNumber: 48,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "CE Characteristics",
+    topicTag: "Input Characteristics",
+    question: "Draw the input characteristics of common emitter configuration.",
+    answerHint: "Curve of Base Current IB (μA) vs Base-Emitter Voltage VBE (V) at constant values of Collector-Emitter Voltage VCE. Resembles a forward-biased diode curve with cut-in voltage ~0.7V for Silicon. Increasing VCE shifts the curve slightly to the right due to Early effect (base-width modulation)."
+  },
+  {
+    id: "cu24_q49",
+    qNumber: 49,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "CE Characteristics",
+    topicTag: "Output Regions",
+    question: "Draw the output characteristics of Common emitter configuration and mark the region saturation, cut-off and active region.",
+    answerHint: "Plot of Collector Current IC (mA) vs Collector-Emitter Voltage VCE (V) for different constant base currents IB: 1. Active Region (E-B forward, C-B reverse biased): Curves are nearly horizontal and parallel; IC = β·IB; used for linear amplification. 2. Saturation Region (Both junctions forward biased): VCE < 0.2V; IC drops sharply to zero. 3. Cut-off Region (Both junctions reverse biased): IB = 0, IC ≈ ICEO ≈ 0; transistor acts as an open switch."
+  },
+  {
+    id: "cu24_q50",
+    qNumber: 50,
+    year: "CU 2024",
+    moduleId: "bipolar_junction_transistors",
+    moduleName: "Bipolar Junction Transistors (BJT)",
+    group: "DC Load Line",
+    topicTag: "Q-Point",
+    question: "What is Q-point?",
+    answerHint: "The Q-point (Quiescent operating point) is the steady-state DC operating condition of a transistor circuit in the absence of an AC input signal, defined by the coordinates (VCEQ, ICQ) on the transistor output characteristic curves at the intersection with the DC load line. For faithful Class-A amplification, the Q-point is chosen near the center of the active load line."
+  },
+
+  // Page 2: Questions 51 to 53 (Field Effect Transistor)
+  {
+    id: "cu24_q51",
+    qNumber: 51,
+    year: "CU 2024",
+    moduleId: "field_effect_transistor",
+    moduleName: "Field Effect Transistor",
+    group: "MOSFET Fundamentals",
+    topicTag: "N-Channel MOSFET",
+    question: "Draw the n-channel MOSFET.",
+    answerHint: "N-channel Enhancement MOSFET symbol: Four terminals: Drain (D), Source (S), Gate (G), and Substrate/Body (B). The gate is drawn as a line parallel to, but insulated by a gap from, three broken line channel segments representing the drain, substrate, and source. An inward-pointing arrow on the substrate lead designates an n-channel."
+  },
+  {
+    id: "cu24_q52",
+    qNumber: 52,
+    year: "CU 2024",
+    moduleId: "field_effect_transistor",
+    moduleName: "Field Effect Transistor",
+    group: "MOSFET Modes",
+    topicTag: "Enhancement vs Depletion",
+    question: "What is enhance and depletion modes of MOSFET?",
+    answerHint: "Enhancement Mode MOSFET: Normally-OFF device with no built-in physical conductive channel at VGS = 0V. Applying a positive gate voltage VGS exceeding threshold Vth attracts electrons to form an induced conductive inversion layer. Depletion Mode MOSFET: Normally-ON device featuring a physically fabricated channel conducting drain current at VGS = 0V (ID = IDSS). Applying negative VGS depletes channel carriers (depletion mode); applying positive VGS attracts more carriers (enhancement mode)."
+  },
+  {
+    id: "cu24_q53",
+    qNumber: 53,
+    year: "CU 2024",
+    moduleId: "field_effect_transistor",
+    moduleName: "Field Effect Transistor",
+    group: "Digital CMOS",
+    topicTag: "CMOS Technology",
+    question: "What is CMOS?",
+    answerHint: "CMOS stands for Complementary Metal-Oxide-Semiconductor. It is an integrated circuit technology that pairs complementary N-channel (NMOS) and P-channel (PMOS) enhancement MOSFETs in series across power rails. When input is HIGH, NMOS is ON and PMOS is OFF; when input is LOW, PMOS is ON and NMOS is OFF. Consequently, there is never a direct path from VDD to ground, resulting in near-zero static power dissipation and high noise immunity."
+  },
+
+  // Page 2: Questions 54 to 58 (Operational Amplifiers - Op-Amps)
+  {
+    id: "cu24_q54",
+    qNumber: 54,
+    year: "CU 2024",
+    moduleId: "operational_amplifiers_applications",
+    moduleName: "Operational Amplifiers & Applications",
+    group: "Op-Amp Fundamentals",
+    topicTag: "Definition",
+    question: "What is operational amplifier?",
+    answerHint: "An Operational Amplifier (Op-Amp) is a high-gain, direct-coupled, differential-input, voltage amplifier integrated circuit designed originally to perform mathematical operations (addition, subtraction, integration, differentiation, multiplication) in analog computers. Ideal characteristics: Infinite open-loop gain (AOL = ∞), infinite input impedance (Zin = ∞), zero output impedance (Zout = 0), and infinite bandwidth."
+  },
+  {
+    id: "cu24_q55",
+    qNumber: 55,
+    year: "CU 2024",
+    moduleId: "operational_amplifiers_applications",
+    moduleName: "Operational Amplifiers & Applications",
+    group: "IC 741 Pinout",
+    topicTag: "Pin Diagram",
+    question: "Draw the pin diagram of 741 IC.",
+    answerHint: "Standard 8-pin Dual In-line Package (DIP): Pin 1: Offset Null; Pin 2: Inverting Input (V-); Pin 3: Non-inverting Input (V+); Pin 4: Negative Power Supply (-Vee / GND); Pin 5: Offset Null; Pin 6: Output (Vout); Pin 7: Positive Power Supply (+Vcc); Pin 8: NC (No Connection)."
+  },
+  {
+    id: "cu24_q56",
+    qNumber: 56,
+    year: "CU 2024",
+    moduleId: "operational_amplifiers_applications",
+    moduleName: "Operational Amplifiers & Applications",
+    group: "Op-Amp Derivations",
+    topicTag: "Inverting Amplifier",
+    question: "Draw the circuit diagram of inverting amplifier and derive the output voltage.",
+    answerHint: "Derivation: Input voltage Vin applied through R1 to inverting pin (-); feedback resistor Rf connected between output and inverting pin; non-inverting pin (+) is grounded (0V). Due to infinite gain AOL, inverting terminal sits at Virtual Ground (V- ≈ 0V). Since input impedance Zin = ∞, input current Iin flows entirely through Rf: Iin = (Vin - 0) / R1; If = (0 - Vout) / Rf. By KCL at node: Iin = If → Vin / R1 = - Vout / Rf. Therefore: Vout = - (Rf / R1) · Vin. (Gain Av = - Rf / R1)."
+  },
+  {
+    id: "cu24_q57",
+    qNumber: 57,
+    year: "CU 2024",
+    moduleId: "operational_amplifiers_applications",
+    moduleName: "Operational Amplifiers & Applications",
+    group: "Op-Amp Derivations",
+    topicTag: "Non-Inverting Amplifier",
+    question: "Draw the circuit diagram of non-inverting amplifier and derive the output voltage.",
+    answerHint: "Derivation: Input voltage Vin is applied directly to non-inverting pin (+); feedback resistor Rf connected from output to inverting pin (-), with resistor R1 from inverting pin to ground. Due to virtual short (AOL = ∞), V- = V+ = Vin. Applying voltage divider rule across R1 and Rf: V- = Vout · [R1 / (R1 + Rf)]. Since V- = Vin: Vin = Vout · [R1 / (R1 + Rf)] → Vout = [ (R1 + Rf) / R1 ] · Vin = (1 + Rf / R1) · Vin. (Gain Av = 1 + Rf / R1, strictly ≥ 1, non-inverted)."
+  },
+  {
+    id: "cu24_q58",
+    qNumber: 58,
+    year: "CU 2024",
+    moduleId: "operational_amplifiers_applications",
+    moduleName: "Operational Amplifiers & Applications",
+    group: "Op-Amp Derivations",
+    topicTag: "Summing Amplifier",
+    question: "Draw the circuit diagram of summing amplifier and derive the output gain.",
+    answerHint: "Derivation: Input voltages V1, V2, V3 connected via resistors R1, R2, R3 to the inverting input pin (-); non-inverting input (+) tied to ground (0V). By virtual ground, V- = 0V. Sum of input currents equals feedback current: I1 + I2 + I3 = If → (V1/R1) + (V2/R2) + (V3/R3) = (0 - Vout) / Rf. Therefore: Vout = - [ (Rf/R1)·V1 + (Rf/R2)·V2 + (Rf/R3)·V3 ]. If R1 = R2 = R3 = R: Vout = - (Rf / R) · (V1 + V2 + V3)."
+  },
+
+  // Page 2: Questions 59 to 62 (Electronic Communication)
+  {
+    id: "cu24_q59",
+    qNumber: 59,
+    year: "CU 2024",
+    moduleId: "electronic_communication",
+    moduleName: "Electronic Communication Systems",
+    group: "Modulation Principles",
+    topicTag: "Need for Modulation",
+    question: "Why modulation required for communication system.",
+    answerHint: "1. Practical Antenna Length: Efficient radiation requires antenna length h ≈ λ/4 = c / (4·f). For baseband audio (15 kHz), h = 5 km (impractical); modulated to 1 MHz RF, h = 75 meters (practical). 2. Avoids Message Interference (Multiplexing): Translates different audio channels to distinct RF carrier frequencies so multiple stations broadcast simultaneously without overlapping. 3. Overcomes Noise: High-frequency carrier waves radiate power far more efficiently through free space with reduced attenuation."
+  },
+  {
+    id: "cu24_q60",
+    qNumber: 60,
+    year: "CU 2024",
+    moduleId: "electronic_communication",
+    moduleName: "Electronic Communication Systems",
+    group: "Modulation Types",
+    topicTag: "AM vs FM",
+    question: "What are AM and FM?",
+    answerHint: "Amplitude Modulation (AM): A modulation process where the amplitude of a high-frequency carrier wave is varied linearly in accordance with the instantaneous amplitude of the message signal, while its frequency and phase remain constant. Frequency Modulation (FM): A modulation process where the instantaneous frequency of the carrier wave is varied in accordance with the amplitude of the modulating signal, while its amplitude and phase remain constant (providing superior noise immunity)."
+  },
+  {
+    id: "cu24_q61",
+    qNumber: 61,
+    year: "CU 2024",
+    moduleId: "electronic_communication",
+    moduleName: "Electronic Communication Systems",
+    group: "RF Spectrum",
+    topicTag: "FM Radio Range",
+    question: "Write the frequency range of FM radio.",
+    answerHint: "Standard Commercial VHF FM broadcast radio band operates in the frequency range of 88 MHz to 108 MHz (VHF Band II), with station channel spacing typically 200 kHz."
+  },
+  {
+    id: "cu24_q62",
+    qNumber: 62,
+    year: "CU 2024",
+    moduleId: "electronic_communication",
+    moduleName: "Electronic Communication Systems",
+    group: "Audio Range",
+    topicTag: "Acoustic Bandwidth",
+    question: "Write the audio frequency range.",
+    answerHint: "The standard audible frequency range for human hearing is 20 Hz to 20,000 Hz (20 Hz to 20 kHz). For telephone voice communication, the commercial speech bandwidth is restricted to 300 Hz to 3,400 Hz."
+  },
+
+  // Page 2-3: Questions 63 to 80 (Digital Logic Circuits)
+  {
+    id: "cu24_q63",
+    qNumber: 63,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Number System Conversions",
+    topicTag: "Decimal to Binary",
+    question: "Convert (47)10= ( )2",
+    answerHint: "Successive division by 2: 47/2 = 23 rem 1; 23/2 = 11 rem 1; 11/2 = 5 rem 1; 5/2 = 2 rem 1; 2/2 = 1 rem 0; 1/2 = 0 rem 1. Reading remainders bottom to top: (47)₁₀ = (101111)₂."
+  },
+  {
+    id: "cu24_q64",
+    qNumber: 64,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Number System Conversions",
+    topicTag: "Binary to Decimal",
+    question: "Convert (10101011)2= ( )10",
+    answerHint: "Positional weight expansion: 1·2⁷ + 0·2⁶ + 1·2⁵ + 0·2⁴ + 1·2³ + 0·2² + 1·2¹ + 1·2⁰ = 128 + 0 + 32 + 0 + 8 + 0 + 2 + 1 = (171)₁₀."
+  },
+  {
+    id: "cu24_q65",
+    qNumber: 65,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Number System Conversions",
+    topicTag: "Hexadecimal to Decimal",
+    question: "(FF)16= ( )10",
+    answerHint: "In hexadecimal: F = 15. Positional weights: 15·16¹ + 15·16⁰ = 15·16 + 15·1 = 240 + 15 = (255)₁₀."
+  },
+  {
+    id: "cu24_q66",
+    qNumber: 66,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Number System Conversions",
+    topicTag: "Decimal to Hexadecimal",
+    question: "(85)10=( )16",
+    answerHint: "Successive division by 16: 85 / 16 = 5 with remainder 5. Reading bottom to top: (85)₁₀ = (55)₁₆. (Check: 5·16 + 5 = 80 + 5 = 85)."
+  },
+  {
+    id: "cu24_q67",
+    qNumber: 67,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Memory Units",
+    topicTag: "Data Storage",
+    question: "1 Gb=( ?) MB",
+    answerHint: "In digital electronics and memory addressing (binary binary standard): 1 GB (Gigabyte) = 1,024 MB (Megabytes) = 2¹⁰ MB. In SI decimal standard: 1 Gb = 1,000 MB. (Note: 1 Gb = 1 Gigabit = 128 MB or 1,024 Mb)."
+  },
+  {
+    id: "cu24_q68",
+    qNumber: 68,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Logic Gates",
+    topicTag: "OR Gate",
+    question: "Draw the two inputs OR gate and write the truth table.",
+    answerHint: "Symbol: Curved input buffer with pointed output shield. Boolean Expression: Y = A + B. Truth Table: A=0, B=0 → Y=0; A=0, B=1 → Y=1; A=1, B=0 → Y=1; A=1, B=1 → Y=1. Output is HIGH if any input is HIGH."
+  },
+  {
+    id: "cu24_q69",
+    qNumber: 69,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Logic Gates",
+    topicTag: "AND Gate",
+    question: "Draw the two inputs AND gate and write the truth table.",
+    answerHint: "Symbol: Flat input back with semicircular rounded output. Boolean Expression: Y = A · B. Truth Table: A=0, B=0 → Y=0; A=0, B=1 → Y=0; A=1, B=0 → Y=0; A=1, B=1 → Y=1. Output is HIGH only when both inputs are HIGH."
+  },
+  {
+    id: "cu24_q70",
+    qNumber: 70,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Logic Gates",
+    topicTag: "NOT Gate",
+    question: "Draw the NOT gate and write the truth table.",
+    answerHint: "Symbol: Triangle buffer with an inversion bubble at the output tip. Boolean Expression: Y = A' (or Ā). Truth Table: A=0 → Y=1; A=1 → Y=0. Output is the logical inverse of input."
+  },
+  {
+    id: "cu24_q71",
+    qNumber: 71,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Logic Gates",
+    topicTag: "NAND Gate",
+    question: "Draw the two inputs NAND gate and write the truth table.",
+    answerHint: "Symbol: AND gate with an inversion bubble at output. Boolean Expression: Y = (A · B)'. Truth Table: A=0, B=0 → Y=1; A=0, B=1 → Y=1; A=1, B=0 → Y=1; A=1, B=1 → Y=0. Output is LOW strictly when both inputs are HIGH."
+  },
+  {
+    id: "cu24_q72",
+    qNumber: 72,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Logic Gates",
+    topicTag: "NOR Gate",
+    question: "Draw the two inputs NOR gate and write the truth table.",
+    answerHint: "Symbol: OR gate with an inversion bubble at output. Boolean Expression: Y = (A + B)'. Truth Table: A=0, B=0 → Y=1; A=0, B=1 → Y=0; A=1, B=0 → Y=0; A=1, B=1 → Y=0. Output is HIGH strictly when both inputs are LOW."
+  },
+  {
+    id: "cu24_q73",
+    qNumber: 73,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Universal Gates",
+    topicTag: "Universality Reason",
+    question: "Why NAND and NOR gate is called universal gate?",
+    answerHint: "NAND and NOR gates are called universal gates because all primary elementary gates (NOT, AND, OR) as well as any arbitrary Boolean combinational or sequential logic circuit can be realized exclusively using only NAND gates or only NOR gates without requiring any other gate type."
+  },
+  {
+    id: "cu24_q74",
+    qNumber: 74,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Boolean Algebra",
+    topicTag: "De Morgan's Theorems",
+    question: "Write De Morgan’s Theorem.",
+    answerHint: "First Theorem: 'The complement of a logical sum is equal to the logical product of the individual complements': (A + B)' = A' · B' (NOR is equivalent to Bubbled AND). Second Theorem: 'The complement of a logical product is equal to the logical sum of the individual complements': (A · B)' = A' + B' (NAND is equivalent to Bubbled OR)."
+  },
+  {
+    id: "cu24_q75",
+    qNumber: 75,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Logic Gates",
+    topicTag: "XOR Gate",
+    question: "Draw the two inputs XOR gate and write the truth table.",
+    answerHint: "Symbol: OR gate with an extra curved line on the input side. Boolean Expression: Y = A ⊕ B = A'B + AB'. Truth Table: A=0, B=0 → Y=0; A=0, B=1 → Y=1; A=1, B=0 → Y=1; A=1, B=1 → Y=0. Output is HIGH when inputs are distinct / unequal."
+  },
+  {
+    id: "cu24_q76",
+    qNumber: 76,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Logic Gates",
+    topicTag: "XNOR Gate",
+    question: "Draw the two inputs XNOR gate and write the truth table.",
+    answerHint: "Symbol: XOR gate with an inversion bubble at the output. Boolean Expression: Y = (A ⊕ B)' = AB + A'B'. Truth Table: A=0, B=0 → Y=1; A=0, B=1 → Y=0; A=1, B=0 → Y=0; A=1, B=1 → Y=1. Output is HIGH when both inputs are identical (Equivalence gate)."
+  },
+  {
+    id: "cu24_q77",
+    qNumber: 77,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Combinational Circuits",
+    topicTag: "Half Adder",
+    question: "Implement half adder with any gate.",
+    answerHint: "A Half Adder adds two 1-bit inputs A and B. Expressions: Sum S = A ⊕ B (1 XOR gate); Carry C = A · B (1 AND gate). Using Universal NAND gates: Realized using exactly 5 NAND gates."
+  },
+  {
+    id: "cu24_q78",
+    qNumber: 78,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Combinational Circuits",
+    topicTag: "Full Adder",
+    question: "Implement Full adder with any gate.",
+    answerHint: "A Full Adder adds three 1-bit inputs A, B, and Cin. Expressions: Sum S = A ⊕ B ⊕ Cin; Carry Cout = AB + Cin·(A ⊕ B). Implementation: Constructed using 2 Half Adders and 1 OR gate (2 XOR gates, 2 AND gates, and 1 OR gate), or synthesized using 9 NAND gates."
+  },
+  {
+    id: "cu24_q79",
+    qNumber: 79,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Sequential Circuits",
+    topicTag: "RS Flip-Flop",
+    question: "Draw the circuit diagram R-S flip flop and write the truth table",
+    answerHint: "Circuit Diagram: Constructed using two cross-coupled NOR gates (or NAND gates) where output Q of one gate feeds back into the input of the other. Truth Table (NOR latch with inputs S, R): S=0, R=0 → Q(t+1) = Q(t) [No Change / Memory]; S=0, R=1 → Q(t+1) = 0, Q'=1 [Reset state]; S=1, R=0 → Q(t+1) = 1, Q'=0 [Set state]; S=1, R=1 → Q=0, Q'=0 [Forbidden / Invalid state]."
+  },
+  {
+    id: "cu24_q80",
+    qNumber: 80,
+    year: "CU 2024",
+    moduleId: "digital_logic_circuits",
+    moduleName: "Digital Logic Circuits",
+    group: "Sequential Circuits",
+    topicTag: "JK Flip-Flop",
+    question: "Draw the circuit diagram J-K flip flop and write the truth table",
+    answerHint: "Circuit Diagram: Clocked RS flip-flop with cross-coupled feedback: output Q' is ANDed with input J and Clock; output Q is ANDed with input K and Clock. Truth Table: J=0, K=0 → Q(t+1) = Q(t) [No change]; J=0, K=1 → Q(t+1) = 0 [Reset]; J=1, K=0 → Q(t+1) = 1 [Set]; J=1, K=1 → Q(t+1) = Q'(t) [Toggle condition]. Eliminates the invalid state of the RS flip-flop."
+  }
+];
